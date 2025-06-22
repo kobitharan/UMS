@@ -1,0 +1,240 @@
+﻿namespace C__UnicomManagementSystem.form
+{
+    partial class LoginMenu
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.Lecturer = new System.Windows.Forms.Button();
+            this.managerAdd = new System.Windows.Forms.Button();
+            this.ADDSTAFF = new System.Windows.Forms.Button();
+            this.CourseSubjectADD = new System.Windows.Forms.Button();
+            this.BatchADD = new System.Windows.Forms.Button();
+            this.ClassroomAdd = new System.Windows.Forms.Button();
+            this.EXamResulADD = new System.Windows.Forms.Button();
+            this.NICADD = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.TimeTable = new System.Windows.Forms.Button();
+            this.Staff = new System.Windows.Forms.Button();
+            this.Manager = new System.Windows.Forms.Button();
+            this.Exam = new System.Windows.Forms.Button();
+            this.datapanel = new System.Windows.Forms.Panel();
+            this.panel2.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.Lecturer);
+            this.panel2.Controls.Add(this.managerAdd);
+            this.panel2.Controls.Add(this.ADDSTAFF);
+            this.panel2.Controls.Add(this.CourseSubjectADD);
+            this.panel2.Controls.Add(this.BatchADD);
+            this.panel2.Controls.Add(this.ClassroomAdd);
+            this.panel2.Controls.Add(this.EXamResulADD);
+            this.panel2.Controls.Add(this.NICADD);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.TimeTable);
+            this.panel2.Controls.Add(this.Staff);
+            this.panel2.Controls.Add(this.Manager);
+            this.panel2.Controls.Add(this.Exam);
+            this.panel2.Location = new System.Drawing.Point(3, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(143, 675);
+            this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // Lecturer
+            // 
+            this.Lecturer.Location = new System.Drawing.Point(7, 199);
+            this.Lecturer.Name = "Lecturer";
+            this.Lecturer.Size = new System.Drawing.Size(127, 23);
+            this.Lecturer.TabIndex = 25;
+            this.Lecturer.Text = "Lecturer";
+            this.Lecturer.UseVisualStyleBackColor = true;
+            this.Lecturer.Click += new System.EventHandler(this.Lecturer_Click);
+            // 
+            // managerAdd
+            // 
+            this.managerAdd.Location = new System.Drawing.Point(7, 462);
+            this.managerAdd.Name = "managerAdd";
+            this.managerAdd.Size = new System.Drawing.Size(127, 23);
+            this.managerAdd.TabIndex = 24;
+            this.managerAdd.Text = "Manager ADD";
+            this.managerAdd.UseVisualStyleBackColor = true;
+            this.managerAdd.Click += new System.EventHandler(this.managerAdd_Click);
+            // 
+            // ADDSTAFF
+            // 
+            this.ADDSTAFF.Location = new System.Drawing.Point(7, 404);
+            this.ADDSTAFF.Name = "ADDSTAFF";
+            this.ADDSTAFF.Size = new System.Drawing.Size(127, 23);
+            this.ADDSTAFF.TabIndex = 23;
+            this.ADDSTAFF.Text = "ADD Staff";
+            this.ADDSTAFF.UseVisualStyleBackColor = true;
+            this.ADDSTAFF.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // CourseSubjectADD
+            // 
+            this.CourseSubjectADD.Location = new System.Drawing.Point(7, 288);
+            this.CourseSubjectADD.Name = "CourseSubjectADD";
+            this.CourseSubjectADD.Size = new System.Drawing.Size(127, 23);
+            this.CourseSubjectADD.TabIndex = 21;
+            this.CourseSubjectADD.Text = "Course/Subject";
+            this.CourseSubjectADD.UseVisualStyleBackColor = true;
+            this.CourseSubjectADD.Click += new System.EventHandler(this.button6_Click_1);
+            // 
+            // BatchADD
+            // 
+            this.BatchADD.Location = new System.Drawing.Point(3, 259);
+            this.BatchADD.Name = "BatchADD";
+            this.BatchADD.Size = new System.Drawing.Size(127, 23);
+            this.BatchADD.TabIndex = 20;
+            this.BatchADD.Text = "Batch Add";
+            this.BatchADD.UseVisualStyleBackColor = true;
+            this.BatchADD.Click += new System.EventHandler(this.button5_Click_1);
+            // 
+            // ClassroomAdd
+            // 
+            this.ClassroomAdd.Location = new System.Drawing.Point(7, 317);
+            this.ClassroomAdd.Name = "ClassroomAdd";
+            this.ClassroomAdd.Size = new System.Drawing.Size(127, 23);
+            this.ClassroomAdd.TabIndex = 19;
+            this.ClassroomAdd.Text = "Class Room";
+            this.ClassroomAdd.UseVisualStyleBackColor = true;
+            this.ClassroomAdd.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // EXamResulADD
+            // 
+            this.EXamResulADD.Location = new System.Drawing.Point(7, 141);
+            this.EXamResulADD.Name = "EXamResulADD";
+            this.EXamResulADD.Size = new System.Drawing.Size(127, 23);
+            this.EXamResulADD.TabIndex = 18;
+            this.EXamResulADD.Text = "Exam Result Add";
+            this.EXamResulADD.UseVisualStyleBackColor = true;
+            this.EXamResulADD.Click += new System.EventHandler(this.EXamResulADD_Click);
+            // 
+            // NICADD
+            // 
+            this.NICADD.Location = new System.Drawing.Point(7, 375);
+            this.NICADD.Name = "NICADD";
+            this.NICADD.Size = new System.Drawing.Size(127, 23);
+            this.NICADD.TabIndex = 17;
+            this.NICADD.Text = "NIC Ditals";
+            this.NICADD.UseVisualStyleBackColor = true;
+            this.NICADD.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(7, 621);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(127, 23);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "LOG OUT";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // TimeTable
+            // 
+            this.TimeTable.Location = new System.Drawing.Point(3, 230);
+            this.TimeTable.Name = "TimeTable";
+            this.TimeTable.Size = new System.Drawing.Size(127, 23);
+            this.TimeTable.TabIndex = 15;
+            this.TimeTable.Text = "Creat TimeTable";
+            this.TimeTable.UseVisualStyleBackColor = true;
+            this.TimeTable.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // Staff
+            // 
+            this.Staff.Location = new System.Drawing.Point(7, 346);
+            this.Staff.Name = "Staff";
+            this.Staff.Size = new System.Drawing.Size(127, 23);
+            this.Staff.TabIndex = 12;
+            this.Staff.Text = "Staff ";
+            this.Staff.UseVisualStyleBackColor = true;
+            this.Staff.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // Manager
+            // 
+            this.Manager.Location = new System.Drawing.Point(7, 433);
+            this.Manager.Name = "Manager";
+            this.Manager.Size = new System.Drawing.Size(127, 23);
+            this.Manager.TabIndex = 6;
+            this.Manager.Text = "Manager";
+            this.Manager.UseVisualStyleBackColor = true;
+            // 
+            // Exam
+            // 
+            this.Exam.Location = new System.Drawing.Point(9, 170);
+            this.Exam.Name = "Exam";
+            this.Exam.Size = new System.Drawing.Size(127, 23);
+            this.Exam.TabIndex = 4;
+            this.Exam.Text = "Exam";
+            this.Exam.UseVisualStyleBackColor = true;
+            this.Exam.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // datapanel
+            // 
+            this.datapanel.Location = new System.Drawing.Point(149, 4);
+            this.datapanel.Name = "datapanel";
+            this.datapanel.Size = new System.Drawing.Size(1036, 675);
+            this.datapanel.TabIndex = 1;
+            // 
+            // LoginMenu
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1184, 682);
+            this.Controls.Add(this.datapanel);
+            this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "LoginMenu";
+            this.Text = "LoginMenu";
+            this.Load += new System.EventHandler(this.LoginMenu_Load);
+            this.panel2.ResumeLayout(false);
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel datapanel;
+        private System.Windows.Forms.Button Manager;
+        private System.Windows.Forms.Button Exam;
+        private System.Windows.Forms.Button Staff;
+        private System.Windows.Forms.Button TimeTable;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button NICADD;
+        private System.Windows.Forms.Button EXamResulADD;
+        private System.Windows.Forms.Button CourseSubjectADD;
+        private System.Windows.Forms.Button BatchADD;
+        private System.Windows.Forms.Button ClassroomAdd;
+        private System.Windows.Forms.Button ADDSTAFF;
+        private System.Windows.Forms.Button managerAdd;
+        private System.Windows.Forms.Button Lecturer;
+    }
+}

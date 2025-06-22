@@ -1,0 +1,81 @@
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\bin\Debug\C# UnicomManagementSystem.exe.config
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\bin\Debug\C# UnicomManagementSystem.exe
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\bin\Debug\C# UnicomManagementSystem.pdb
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C# UnicomManagementSystem.csproj.AssemblyReference.cache
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.Form1.resources
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.Properties.Resources.resources
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C# UnicomManagementSystem.csproj.GenerateResource.cache
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C# UnicomManagementSystem.csproj.CoreCompileInputs.cache
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C# UnicomManagementSystem.exe
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C# UnicomManagementSystem.pdb
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\bin\Debug\System.Data.SQLite.dll
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\bin\Debug\System.Data.SQLite.xml
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C# Unico.0F2B4A6F.Up2Date
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.LoginMenu.resources
+C:\Users\UT010036\Desktop\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\bin\Debug\C# UnicomManagementSystem.exe.config
+C:\Users\UT010036\Desktop\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\bin\Debug\C# UnicomManagementSystem.exe
+C:\Users\UT010036\Desktop\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\bin\Debug\C# UnicomManagementSystem.pdb
+C:\Users\UT010036\Desktop\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\bin\Debug\System.Data.SQLite.dll
+C:\Users\UT010036\Desktop\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\bin\Debug\System.Data.SQLite.xml
+C:\Users\UT010036\Desktop\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C# UnicomManagementSystem.csproj.AssemblyReference.cache
+C:\Users\UT010036\Desktop\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.Form1.resources
+C:\Users\UT010036\Desktop\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.LoginMenu.resources
+C:\Users\UT010036\Desktop\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.StudentMenu.resources
+C:\Users\UT010036\Desktop\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.Properties.Resources.resources
+C:\Users\UT010036\Desktop\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C# UnicomManagementSystem.csproj.GenerateResource.cache
+C:\Users\UT010036\Desktop\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C# UnicomManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\UT010036\Desktop\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C# Unico.0F2B4A6F.Up2Date
+C:\Users\UT010036\Desktop\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C# UnicomManagementSystem.exe
+C:\Users\UT010036\Desktop\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C# UnicomManagementSystem.pdb
+C:\Users\UT010036\Desktop\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.UsersAdd.resources
+D:\New folder\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\bin\Debug\C# UnicomManagementSystem.exe.config
+D:\New folder\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\bin\Debug\C# UnicomManagementSystem.exe
+D:\New folder\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\bin\Debug\C# UnicomManagementSystem.pdb
+D:\New folder\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\bin\Debug\System.Data.SQLite.dll
+D:\New folder\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\bin\Debug\System.Data.SQLite.xml
+D:\New folder\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C# UnicomManagementSystem.csproj.AssemblyReference.cache
+D:\New folder\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.Form1.resources
+D:\New folder\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.AdminAdd.resources
+D:\New folder\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.LecturerAdd.resources
+D:\New folder\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.LoginMenu.resources
+D:\New folder\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.StaffAdd.resources
+D:\New folder\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.StudentAdd.resources
+D:\New folder\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.StudentMenu.resources
+D:\New folder\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.UsersAdd.resources
+D:\New folder\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.Properties.Resources.resources
+D:\New folder\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C# UnicomManagementSystem.csproj.GenerateResource.cache
+D:\New folder\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C# UnicomManagementSystem.csproj.CoreCompileInputs.cache
+D:\New folder\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C# Unico.0F2B4A6F.Up2Date
+D:\New folder\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C# UnicomManagementSystem.exe
+D:\New folder\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C# UnicomManagementSystem.pdb
+D:\New folder\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.AdminMenu.resources
+D:\New folder\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.ExamMenu.resources
+D:\New folder\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.LecturerMenu.resources
+D:\New folder\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.MarkMenu.resources
+D:\New folder\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.StaffMenu.resources
+D:\New folder\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.TimetableMenu.resources
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.AdminMenu.resources
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.ExamMenu.resources
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.LecturerMenu.resources
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.MarkMenu.resources
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.StudentAdd.resources
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.TimetableMenu.resources
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.UsersAdd.resources
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.LecturerDitals.resources
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.StaffDetails.resources
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.CourseAdd.resources
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.Batch.resources
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.NICAddForm.resources
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.STUDENT.resources
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.RoomADD.resources
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.StudentDitals.resources
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.Massage.resources
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.AddStaff.resources
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.AddStudentDitals.resources
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.menuStaff.resources
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.TimeTableViewStudent.resources
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.StudentExamResult.resources
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.LecturerClassTimeTable.resources
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C# UnicomManagementSystem.exe.config
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.LecturerDitalsShowLecturer.resources
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.ExamResultADD.resources
