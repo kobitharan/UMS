@@ -48,10 +48,9 @@ namespace C__UnicomManagementSystem.Controllers
 
             return lecturers;
         }
-        public List<Lecturer> GetAllLecturerDitals(int lecturerId)
+      
+        public Lecturer GetLecturerById(int lecturerId)
         {
-            var lecturerList = new List<Lecturer>();
-
             using (var conn = DataBasecon.GetConnection())
             {
                 var cmd = new SQLiteCommand(@"
@@ -61,23 +60,28 @@ namespace C__UnicomManagementSystem.Controllers
 
                 cmd.Parameters.AddWithValue("@LecturerId", lecturerId);
 
-                var reader = cmd.ExecuteReader();
-                while (reader.Read())
+                using (var reader = cmd.ExecuteReader())
                 {
-                    lecturerList.Add(new Lecturer
+                    if (reader.Read())
                     {
-                        LecturerId = reader.GetInt32(reader.GetOrdinal("LecturerId")),
-                        FullName = reader.GetString(reader.GetOrdinal("FullName")),
-                        Address = reader.GetString(reader.GetOrdinal("Address")),
-                        NIC = reader.GetString(reader.GetOrdinal("NIC")),
-                        ContactNO = reader.GetString(reader.GetOrdinal("ContactNO")),
-                        Specialization = reader.GetString(reader.GetOrdinal("Specialization"))
-                    });
+                        return new Lecturer
+                        {
+                            LecturerId = Convert.ToInt32(reader["LecturerId"]),
+                            FullName = reader["FullName"].ToString(),
+                            Address = reader["Address"].ToString(),
+                            NIC = reader["NIC"].ToString(),
+                            ContactNO = reader["ContactNO"].ToString(),
+                            Specialization = reader["Specialization"].ToString()
+                        };
+                    }
                 }
             }
 
-            return lecturerList;
+            return null;
         }
+        
+
+
 
     }
 }

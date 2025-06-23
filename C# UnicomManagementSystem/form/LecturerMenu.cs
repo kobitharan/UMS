@@ -59,12 +59,18 @@ namespace C__UnicomManagementSystem.form
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-           // LLoadForm(new ());
+            //
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+            LLoadForm(new LecturerDitalsShowLecturer());
 
+        }
+
+        private void EXAMRESULTADD_Click(object sender, EventArgs e)
+        {
+            LLoadForm(new ExamResultADD());
         }
     }
 }

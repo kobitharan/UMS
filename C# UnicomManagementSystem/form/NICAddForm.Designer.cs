@@ -69,7 +69,7 @@
             this.NICdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.NICdataGridView.Location = new System.Drawing.Point(603, 61);
             this.NICdataGridView.Name = "NICdataGridView";
-            this.NICdataGridView.Size = new System.Drawing.Size(324, 398);
+            this.NICdataGridView.Size = new System.Drawing.Size(285, 275);
             this.NICdataGridView.TabIndex = 3;
             this.NICdataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.NICdataGridView_CellContentClick);
             this.NICdataGridView.SelectionChanged += new System.EventHandler(this.NICdataGridView_SelectionChanged);

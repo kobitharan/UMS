@@ -28,24 +28,27 @@ namespace C__UnicomManagementSystem.form
 
             if (TimeTableList != null && TimeTableList.Count > 0)
             {
-                LecturerShowTimeTable.Text = "";
+                var sb = new StringBuilder(); // faster than +=
 
-                foreach (var TimeTable in TimeTableList)
+                foreach (var timeTable in TimeTableList)
                 {
-                    LecturerShowTimeTable.Text +=
-                        $"Date: {TimeTable.Date}   " +
-                        $"Batch: {TimeTable.BatchName}   " +
-                        $"Course: {TimeTable.CourseName}   " +
-                        $"Start Time: {TimeTable.StartTime}  " +
-                        $"End Time: {TimeTable.EndTime}   " +
-                        $"Lecturer: {TimeTable.LecturerName} \r\n" +
-                        $" \r\n";
+                    sb.AppendLine("📅 Date       : " + timeTable.Date);
+                    sb.AppendLine("📘 Course     : " + timeTable.CourseName);
+                    sb.AppendLine("👨‍🏫 Lecturer   : " + timeTable.LecturerName);
+                    sb.AppendLine("👥 Batch      : " + timeTable.BatchName);
+                    sb.AppendLine("🕒 Start Time : " + timeTable.StartTime);
+                    sb.AppendLine("🕔 End Time   : " + timeTable.EndTime);
+                    sb.AppendLine("──────────────────────────────");
                 }
+
+                LecturerShowTimeTable.Text = sb.ToString();
             }
             else
             {
-                LecturerShowTimeTable.Text = "No Class.";
+                LecturerShowTimeTable.Text = "❌ No Class Available.";
             }
+           
+          
         }
     } 
 }

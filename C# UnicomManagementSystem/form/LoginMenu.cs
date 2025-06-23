@@ -16,8 +16,10 @@ namespace C__UnicomManagementSystem.form
 {
     public partial class LoginMenu : Form
     {
+        LoginDitals _LoginDitals;
         public LoginMenu()
         {
+            _LoginDitals =new LoginDitals();
             InitializeComponent();
 
             Selectuser();
@@ -30,15 +32,15 @@ namespace C__UnicomManagementSystem.form
             //  MessageBox.Show($"Welcome, {Role}");
             if (Role == "Student")
             {
-               EXamResulADD.Visible = false ;
+             //  EXamResulADD.Visible = false ;
                 Exam.Visible = false;
                 TimeTable.Visible = false;
                 BatchADD.Visible = false;
                 CourseSubjectADD.Visible = false;
                 ClassroomAdd.Visible = false;
                 Staff.Visible = false;
-                NICADD.Visible = false;
-                ADDSTAFF.Visible = false;
+              //  NICADD.Visible = false;
+             //  ADDSTAFF.Visible = false;
                 Manager.Visible = false;
                 managerAdd.Visible = false;
                 Lecturer.Visible = false;
@@ -48,15 +50,15 @@ namespace C__UnicomManagementSystem.form
 
             if (Role == "Staff")
             {
-                EXamResulADD.Visible = true;
+              //  EXamResulADD.Visible = true;
                 Exam.Visible = true;
                 TimeTable.Visible = true;
                 BatchADD.Visible = true;
                 CourseSubjectADD.Visible = true;
                 ClassroomAdd.Visible = true;
                 Staff.Visible = true;
-                NICADD.Visible = false;
-                ADDSTAFF.Visible = false;
+              //  NICADD.Visible = false;
+              //  ADDSTAFF.Visible = false;
                 Manager.Visible = false;
                 managerAdd.Visible = false;
                 Lecturer.Visible = false;
@@ -66,7 +68,7 @@ namespace C__UnicomManagementSystem.form
 
             if (Role == "Lecturer")
             {
-                EXamResulADD.Visible = true;
+              //  EXamResulADD.Visible = true;
                 Lecturer.Visible = true;
                 Exam.Visible = true;
                 TimeTable.Visible = true;
@@ -74,23 +76,23 @@ namespace C__UnicomManagementSystem.form
                 CourseSubjectADD.Visible = false;
                 ClassroomAdd.Visible = false;
                 Staff.Visible = false;
-                NICADD.Visible = false;
-                ADDSTAFF.Visible = false;
+              //  NICADD.Visible = false;
+             //   ADDSTAFF.Visible = false;
                 Manager.Visible = false;
                 managerAdd.Visible = false;
                
                 LoadForm(new LecturerMenu());//LecturerMenu
             } if (Role == "Manager")
             {
-                EXamResulADD.Visible = true;
+             //   EXamResulADD.Visible = true;
                 Exam.Visible = true;
                 TimeTable.Visible = true;
                 BatchADD.Visible = true;
                 CourseSubjectADD.Visible = true;
                 ClassroomAdd.Visible = true;
                 Staff.Visible = true;
-                NICADD.Visible = true;
-                ADDSTAFF.Visible = true;
+              //  NICADD.Visible = true;
+              //  ADDSTAFF.Visible = true;
                 Manager.Visible = true;
                 Lecturer.Visible = true;
                 managerAdd.Visible = false;
@@ -100,15 +102,15 @@ namespace C__UnicomManagementSystem.form
 
             if (Role == "Admin")
             {
-                EXamResulADD.Visible = true;
+               // EXamResulADD.Visible = true;
                 Exam.Visible = true;
                 TimeTable.Visible = true;
                 BatchADD.Visible = true;
                 CourseSubjectADD.Visible = true;
                 ClassroomAdd.Visible = true;
                 Staff.Visible = true;
-                NICADD.Visible = true;
-                ADDSTAFF.Visible = true;
+               // NICADD.Visible = true;
+              //  ADDSTAFF.Visible = true;
                 Manager.Visible = true;
                 managerAdd.Visible = true;
                 Lecturer.Visible = true;
@@ -116,6 +118,7 @@ namespace C__UnicomManagementSystem.form
                 
 
         }
+       
         public void LoadForm(object formObj)
         {
             if (this.datapanel.Controls.Count > 0)
@@ -146,6 +149,7 @@ namespace C__UnicomManagementSystem.form
         {
             //Staff
             LoadForm(new menuStaff());
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -203,11 +207,14 @@ namespace C__UnicomManagementSystem.form
         }
 
         private void button1_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-            LoadForm(new Form1());
-           //this.Close();
+        { 
+         
            
+                    Close();
+               
+           
+
+
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -223,8 +230,6 @@ namespace C__UnicomManagementSystem.form
 
         private void button2_Click(object sender, EventArgs e)
         {
-           
-            LoadForm(new NICAddForm());
         }
 
         private void button5_Click_1(object sender, EventArgs e)
@@ -264,6 +269,12 @@ namespace C__UnicomManagementSystem.form
         private void EXamResulADD_Click(object sender, EventArgs e)
         {
             LoadForm(new ExamResultADD());
+
+        }
+
+        private void Manager_Click(object sender, EventArgs e)
+        {
+            LoadForm(new ManagerForm());
 
         }
     }

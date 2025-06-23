@@ -144,7 +144,47 @@ namespace C__UnicomManagementSystem.Controllers
             }
 
         }
-      
+        public List<User> GetAllUsersDetals()
+        {
+            var User = new List<User>();
+
+            try
+            {
+                using (var conn = DataBasecon.GetConnection())
+                {
+
+
+                    const string query = "SELECT *  FROM Users_Table";
+
+                    using (var cmd = new SQLiteCommand(query, conn))
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            var user = new User
+                            {
+                                UserId = reader.GetInt32(reader.GetOrdinal("UserId")),
+                                UserName = reader.GetString(reader.GetOrdinal("UserName")),
+                                Password = reader.GetString(reader.GetOrdinal("Password")),
+                                Status = reader.GetString(reader.GetOrdinal("Status")),
+                                ALLID = reader.GetString(reader.GetOrdinal("ALLID"))
+                            };
+
+                            User.Add(user);
+                        }
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                // Optional: Log the error, or rethrow with custom message
+                Console.WriteLine("Error loading courses: " + ex.Message);
+            }
+
+            return User;
+        }
+
     }
 
 

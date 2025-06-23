@@ -33,142 +33,157 @@ namespace C__UnicomManagementSystem.Controllers
 
             return "This time  Added Successfully!";
         }
-       
-        public List<Timetable > GetTimeTableDitals()
+
+        public List<Timetable> GetTimeTableDitals()
         {
-            var Ttable = new List<Timetable >();
+            var Ttable = new List<Timetable>();
 
             using (var conn = DataBasecon.GetConnection())
-            {var cmd = new SQLiteCommand(@"
-                                        SELECT 
-                                            T.TimeTableId,
-                                            T.Date,
-                                            T.StartTime,
-                                            T.EndTime,
-                                            B.BatchName AS BatchName,
-                                            C.CourseName AS CourseName,
-                                            S.SubjectName AS SubjectName,
-                                            R.RoomName AS RoomName,
-                                            L.FullName AS FullName
-                                        FROM Time_Table T
-                                        LEFT JOIN Batch_Table B ON T.BatchId = B.BatchId
-                                        LEFT JOIN Course_Table C ON T.CourseId = C.CourseId
-                                        LEFT JOIN Subject_Table S ON T.SubjectId = S.SubjectId
-                                        LEFT JOIN Room_Table R ON T.RoomId = R.RoomId
-                                        LEFT JOIN Lecturer_Table L ON T.LecturerId = L.LecturerId", conn);
+            {
+                var cmd = new SQLiteCommand(@"
+            SELECT 
+                T.TimeTableId,
+                T.Date,
+                T.StartTime,
+                T.EndTime,
+                B.BatchName AS BatchName,
+                C.CourseName AS CourseName,
+                S.SubjectName AS SubjectName,
+                R.RoomName AS RoomName,
+                L.FullName AS FullName
+            FROM Time_Table T
+            LEFT JOIN Batch_Table B ON T.BatchId = B.BatchId
+            LEFT JOIN Course_Table C ON T.CourseId = C.CourseId
+            LEFT JOIN Subject_Table S ON T.SubjectId = S.SubjectId
+            LEFT JOIN Room_Table R ON T.RoomId = R.RoomId
+            LEFT JOIN Lecturer_Table L ON T.LecturerId = L.LecturerId", conn);
 
                 var reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
                     Ttable.Add(new Timetable
                     {
-                        TimeTableId = reader.GetInt32(reader.GetOrdinal("TimeTableId")),
-                        Date = reader.GetString(reader.GetOrdinal("Date")),
-                        StartTime = reader.GetString(reader.GetOrdinal("StartTime")), // FIXED
-                        EndTime = reader.GetString(reader.GetOrdinal("EndTime")),     // FIXED
-                        BatchName = reader.GetString(reader.GetOrdinal("BatchName")),
-                        CourseName = reader.GetString(reader.GetOrdinal("CourseName")),
-                        // SubjectName = reader.GetString(reader.GetOrdinal("SubjectName")), // Uncomment if needed
-                        RoomName = reader.GetString(reader.GetOrdinal("RoomName")),
-                        LecturerName = reader.GetString(reader.GetOrdinal("FullName"))
+                        TimeTableId = reader["TimeTableId"] != DBNull.Value ? Convert.ToInt32(reader["TimeTableId"]) : 0,
+                        Date = reader["Date"]?.ToString() ?? "N/A",
+                        StartTime = reader["StartTime"]?.ToString() ?? "N/A",
+                        EndTime = reader["EndTime"]?.ToString() ?? "N/A",
+                        BatchName = reader["BatchName"]?.ToString() ?? "N/A",
+                        CourseName = reader["CourseName"]?.ToString() ?? "N/A",
+                        SubjectName = reader["SubjectName"]?.ToString() ?? "N/A",
+                        RoomName = reader["RoomName"]?.ToString() ?? "N/A",
+                        LecturerName = reader["FullName"]?.ToString() ?? "N/A"
                     });
-
                 }
             }
 
             return Ttable;
-
         }
-        public List<Timetable > GetAllTimeTableDitals(int id)
-        {
-            var Ttable = new List<Timetable >();
 
-            using (var conn = DataBasecon.GetConnection())
-            {var cmd = new SQLiteCommand(@"
-                                        SELECT 
-                                            T.TimeTableId,
-                                            T.Date,
-                                            T.StartTime,
-                                            T.EndTime,
-                                            B.BatchName AS BatchName,
-                                            C.CourseName AS CourseName,
-                                            S.SubjectName AS SubjectName,
-                                            R.RoomName AS RoomName,
-                                            L.FullName AS FullName
-                                        FROM Time_Table T
-                                        LEFT JOIN Batch_Table B ON T.BatchId = B.BatchId
-                                        LEFT JOIN Course_Table C ON T.CourseId = C.CourseId
-                                        LEFT JOIN Subject_Table S ON T.SubjectId = S.SubjectId
-                                        LEFT JOIN Room_Table R ON T.RoomId = R.RoomId
-                                        LEFT JOIN Lecturer_Table L ON T.LecturerId = L.LecturerId
-                                         WHERE T.CourseId = @Id", conn);
-                cmd.Parameters.AddWithValue("@Id", id);
-                var reader = cmd.ExecuteReader();
-                while (reader.Read())
+        public List<Timetable> GetAllTimeTableDitals(int id)
+        {
+            var Ttable = new List<Timetable>();
+
+            try
+            {
+                using (var conn = DataBasecon.GetConnection())
                 {
-                    Ttable.Add(new Timetable
+                    var cmd = new SQLiteCommand(@"
+                SELECT 
+                    T.TimeTableId,
+                    T.Date,
+                    T.StartTime,
+                    T.EndTime,
+                    B.BatchName AS BatchName,
+                    C.CourseName AS CourseName,
+                    S.SubjectName AS SubjectName,
+                    R.RoomName AS RoomName,
+                    L.FullName AS FullName
+                FROM Time_Table T
+                LEFT JOIN Batch_Table B ON T.BatchId = B.BatchId
+                LEFT JOIN Course_Table C ON T.CourseId = C.CourseId
+                LEFT JOIN Subject_Table S ON T.SubjectId = S.SubjectId
+                LEFT JOIN Room_Table R ON T.RoomId = R.RoomId
+                LEFT JOIN Lecturer_Table L ON T.LecturerId = L.LecturerId
+                WHERE T.CourseId = @Id", conn);
+
+                    cmd.Parameters.AddWithValue("@Id", id);
+
+                    var reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
                     {
-                        TimeTableId = reader.GetInt32(reader.GetOrdinal("TimeTableId")),
-                        Date = reader.GetString(reader.GetOrdinal("Date")),
-                        StartTime = reader["StartTime"] != DBNull.Value ? reader["StartTime"].ToString() : "",
-                        EndTime = reader["EndTime"] != DBNull.Value ? reader["EndTime"].ToString() : "",
-                        BatchName = reader.GetString(reader.GetOrdinal("BatchName")),
-                        CourseName = reader.GetString(reader.GetOrdinal("CourseName")),
-                      //  SubjectName = reader.GetString(reader.GetOrdinal("SubjectName")),
-                        RoomName = reader.GetString(reader.GetOrdinal("RoomName")),
-                        LecturerName = reader.GetString(reader.GetOrdinal("FullName")),
-                      //  EndTime = reader.GetString(reader.GetOrdinal("EndTime"))
-                    });
+                        var timetable = new Timetable
+                        {
+                            TimeTableId = reader["TimeTableId"] != DBNull.Value ? Convert.ToInt32(reader["TimeTableId"]) : 0,
+                            Date = reader["Date"] != DBNull.Value ? reader["Date"].ToString() : "N/A",
+                            StartTime = reader["StartTime"] != DBNull.Value ? reader["StartTime"].ToString() : "N/A",
+                            EndTime = reader["EndTime"] != DBNull.Value ? reader["EndTime"].ToString() : "N/A",
+                            BatchName = reader["BatchName"] != DBNull.Value ? reader["BatchName"].ToString() : "N/A",
+                            CourseName = reader["CourseName"] != DBNull.Value ? reader["CourseName"].ToString() : "N/A",
+                            SubjectName = reader["SubjectName"] != DBNull.Value ? reader["SubjectName"].ToString() : "N/A",
+                            RoomName = reader["RoomName"] != DBNull.Value ? reader["RoomName"].ToString() : "N/A",
+                            LecturerName = reader["FullName"] != DBNull.Value ? reader["FullName"].ToString() : "N/A"
+                        };
+
+                        Ttable.Add(timetable);
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+                // Optionally: MessageBox.Show("Something went wrong: " + ex.Message);
             }
 
             return Ttable;
-
-        } public List<Timetable > GetAllTimeTableDitalsShowLecturer( )
-        {
-            var Ttable = new List<Timetable >();
-
-            using (var conn = DataBasecon.GetConnection())
-            {var cmd = new SQLiteCommand(@"
-                                        SELECT 
-                                            T.TimeTableId,
-                                            T.Date,
-                                            T.StartTime,
-                                            T.EndTime,
-                                            B.BatchName AS BatchName,
-                                            C.CourseName AS CourseName,
-                                            S.SubjectName AS SubjectName,
-                                            R.RoomName AS RoomName,
-                                            L.FullName AS FullName
-                                        FROM Time_Table T
-                                        LEFT JOIN Batch_Table B ON T.BatchId = B.BatchId
-                                        LEFT JOIN Course_Table C ON T.CourseId = C.CourseId
-                                        LEFT JOIN Subject_Table S ON T.SubjectId = S.SubjectId
-                                        LEFT JOIN Room_Table R ON T.RoomId = R.RoomId
-                                        LEFT JOIN Lecturer_Table L ON T.LecturerId = L.LecturerId", conn);
-           
-                var reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    Ttable.Add(new Timetable
-                    {
-                        TimeTableId = reader.GetInt32(reader.GetOrdinal("TimeTableId")),
-                        Date = reader.GetString(reader.GetOrdinal("Date")),
-                        StartTime = reader["StartTime"] != DBNull.Value ? reader["StartTime"].ToString() : "",
-                        EndTime = reader["EndTime"] != DBNull.Value ? reader["EndTime"].ToString() : "",
-                        BatchName = reader.GetString(reader.GetOrdinal("BatchName")),
-                        CourseName = reader.GetString(reader.GetOrdinal("CourseName")),
-                      //  SubjectName = reader.GetString(reader.GetOrdinal("SubjectName")),
-                        RoomName = reader.GetString(reader.GetOrdinal("RoomName")),
-                        LecturerName = reader.GetString(reader.GetOrdinal("FullName")),
-                      //  EndTime = reader.GetString(reader.GetOrdinal("EndTime"))
-                    });
-                }
-            }
-
-            return Ttable;
-
         }
+
+
+        public List<Timetable> GetAllTimeTableDitalsShowLecturer()
+        {
+            var Ttable = new List<Timetable>();
+
+            using (var conn = DataBasecon.GetConnection())
+            {
+                var cmd = new SQLiteCommand(@"
+            SELECT 
+                T.TimeTableId,
+                T.Date,
+                T.StartTime,
+                T.EndTime,
+                B.BatchName AS BatchName,
+                C.CourseName AS CourseName,
+                S.SubjectName AS SubjectName,
+                R.RoomName AS RoomName,
+                L.FullName AS FullName
+            FROM Time_Table T
+            LEFT JOIN Batch_Table B ON T.BatchId = B.BatchId
+            LEFT JOIN Course_Table C ON T.CourseId = C.CourseId
+            LEFT JOIN Subject_Table S ON T.SubjectId = S.SubjectId
+            LEFT JOIN Room_Table R ON T.RoomId = R.RoomId
+            LEFT JOIN Lecturer_Table L ON T.LecturerId = L.LecturerId", conn);
+
+                var reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Ttable.Add(new Timetable
+                    {
+                        TimeTableId = reader["TimeTableId"] != DBNull.Value ? Convert.ToInt32(reader["TimeTableId"]) : 0,
+                        Date = reader["Date"]?.ToString() ?? "N/A",
+                        StartTime = reader["StartTime"]?.ToString() ?? "N/A",
+                        EndTime = reader["EndTime"]?.ToString() ?? "N/A",
+                        BatchName = reader["BatchName"]?.ToString() ?? "N/A",
+                        CourseName = reader["CourseName"]?.ToString() ?? "N/A",
+                        SubjectName = reader["SubjectName"]?.ToString() ?? "N/A",
+                        RoomName = reader["RoomName"]?.ToString() ?? "N/A",
+                        LecturerName = reader["FullName"]?.ToString() ?? "N/A"
+                    });
+                }
+            }
+
+            return Ttable;
+        }
+
         public bool IsTimeOverlapping(string date, string startTime, string endTime, int batchId)
         {
             using (var conn = DataBasecon.GetConnection())

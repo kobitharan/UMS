@@ -79,3 +79,6 @@ Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__U
 Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C# UnicomManagementSystem.exe.config
 Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.LecturerDitalsShowLecturer.resources
 Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.ExamResultADD.resources
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.StudentExamDitalsShow.resources
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.ManagerForm.resources
+Z:\C# project\C# UnicomManagementSystem\C# UnicomManagementSystem\obj\Debug\C__UnicomManagementSystem.form.GetDataShow.resources

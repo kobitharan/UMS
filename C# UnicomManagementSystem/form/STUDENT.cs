@@ -58,30 +58,33 @@ namespace C__UnicomManagementSystem.form
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            LoadForm2(new Massage()); 
+            // LoadForm2(new Massage()); 
+           // 
         }
 
         private void Massage_Click(object sender, EventArgs e)
         {
-            LoadForm2(new Massage());
+           // LoadForm2(new Massage());
            
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            //Time table 
             LoadForm2(new TimeTableViewStudent());
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            LoadForm2(new StudentExamResult());
+            LoadForm2(new StudentExamDitalsShow());
+
         }
 
         private void Exams_Click(object sender, EventArgs e)
         {
+            //
             LoadForm2(new StudentExamResult());
+          
 
         }
     }

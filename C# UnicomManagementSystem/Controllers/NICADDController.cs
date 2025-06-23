@@ -35,9 +35,10 @@ namespace C__UnicomManagementSystem.Controllers
                         {
                             var NICdata = new NICdata
                             {
-                                NICId = reader.GetString(reader.GetOrdinal("NICId")),
+                                NICId = reader.GetInt32(reader.GetOrdinal("NICId")),
                                 NIC = reader.GetString(reader.GetOrdinal("NIC")),
                                 Role = reader.GetString(reader.GetOrdinal("Role"))
+
                             };
 
                             NIC.Add(NICdata);
@@ -92,45 +93,32 @@ namespace C__UnicomManagementSystem.Controllers
                 // Optionally log it to a file or UI
             }
         }
-        public List<NICdata> GetNICCheck(String NICNO)
+        public List<NICdata> GetNICCheck(string nicNo)
         {
-            var NIC = new List<NICdata>();
+            var nicList = new List<NICdata>();
 
-            try
+            using (var conn = DataBasecon.GetConnection())
             {
-                using (var conn = DataBasecon.GetConnection())
+                const string query = "SELECT NICId, NIC, Role FROM NIC_Table WHERE NIC = @NIC";
+                var cmd = new SQLiteCommand(query, conn);
+                cmd.Parameters.AddWithValue("@NIC", nicNo);
+
+                using (var reader = cmd.ExecuteReader())
                 {
-                    const string query = "SELECT NIC,Role FROM NIC_Table ";
-
-                    using (var cmd = new SQLiteCommand(query, conn))
-                    using (var reader = cmd.ExecuteReader())
+                    while (reader.Read())
                     {
-                        while (reader.Read())
+                        nicList.Add(new NICdata
                         {
-                            if (NICNO == reader.GetString(reader.GetOrdinal("NIC")))
-                            {
-
-                                var NICdat = new NICdata
-                                {
-                                    NIC = reader.GetString(reader.GetOrdinal("NIC")),
-                                    Role = reader.GetString(reader.GetOrdinal("Role"))
-                                };
-
-                                NIC.Add(NICdat);
-
-                            }
-                        }
-
+                            NICId = reader.GetInt32(reader.GetOrdinal("NICId")),
+                            NIC = reader.GetString(reader.GetOrdinal("NIC")),
+                            Role = reader.GetString(reader.GetOrdinal("Role"))
+                        });
                     }
                 }
             }
-            catch (Exception ex)
-            {
-                // Optional: Log the error, or rethrow with custom message
-                Console.WriteLine("Error loading courses: " + ex.Message);
-            }
 
-            return NIC;
+            return nicList;
+
         }
 
     }

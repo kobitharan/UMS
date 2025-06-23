@@ -16,7 +16,8 @@ namespace C__UnicomManagementSystem
         static void Main()
         {
 
-
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
 
             DatabaseInitializer.CreateTables();
 

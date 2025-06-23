@@ -20,6 +20,8 @@ namespace C__UnicomManagementSystem.models
         public string LecturerName { get; set; }
         public string Ditals { get; set; }
         public string SubjectName { get; set; }
+        public string StudentName { get; set; }
+        public string ExamDetails { get; set; }
         public string CourseName { get; set; }
         public string BatchName { get; set; }
 

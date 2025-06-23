@@ -58,6 +58,29 @@ namespace C__UnicomManagementSystem.Controllers
                 return count;
             }
         }
+        public bool IsUserNameExists(string username)
+        {
+            using (var conn = DataBasecon.GetConnection())
+            {
+                string query = @"
+            SELECT COUNT(*) FROM (
+                SELECT UserName FROM Users_Table
+                UNION
+                SELECT UserName FROM AddStudent_Table
+                UNION
+                SELECT UserName FROM Add_Table
+            )
+            WHERE UserName = @UserName";
+
+                using (var cmd = new SQLiteCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@UserName", username);
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+                    return count > 0;
+                }
+            }
+        }
+
 
     }
 }

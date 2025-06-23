@@ -40,5 +40,20 @@ namespace C__UnicomManagementSystem.form
             // LecturerDitals
             LoadForm3(new LecturerDitals());
         }
+
+        private void NICADDD_Click(object sender, EventArgs e)
+        {
+            LoadForm3(new NICAddForm());
+        }
+
+        private void ClassroomAdd_Click(object sender, EventArgs e)
+        {
+            LoadForm3(new RoomADD());
+        }
+
+        private void ExamResultADD_Click(object sender, EventArgs e)
+        {
+            LoadForm3(new ExamResultADD());
+        }
     }
 }

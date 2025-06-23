@@ -25,24 +25,29 @@ namespace C__UnicomManagementSystem.form
             var results = _examController.GetAllExamResults();
             ResultGrid.DataSource = results;
             ResultGrid.ClearSelection();
-            ResultGrid.Columns["MarkId"].Visible = false;
-            ResultGrid.Columns["ExamId"].Visible = false;
-            ResultGrid.Columns["StudentId"].Visible = false;
-            ResultGrid.Columns["LecturerId"].Visible = false;
-            ResultGrid.Columns["RoomId"].Visible = false;
-            ResultGrid.Columns["CourseId"].Visible = false;
-            ResultGrid.Columns["EndTime"].Visible = false;
-            ResultGrid.Columns["StartTime"].Visible = false;
-            ResultGrid.Columns["Ditals"].Visible = false;
-            ResultGrid.Columns["RoomName"].Visible = false;
-            ResultGrid.Columns["BatchId"].Visible = false;
-            ResultGrid.Columns["Date"].Visible = false;
-            ResultGrid.Columns["SubjectId"].Visible = false;
-            ResultGrid.Columns["RoomName"].Visible = false;
-            ResultGrid.Columns["BatchId"].Visible = false;
 
+            // Columns to hide (avoid duplicates)
+            string[] hiddenColumns = {
+        "MarkId", "ExamId", "StudentId", "LecturerId", "LecturerName",
+        "RoomId", "CourseId", "EndTime", "StartTime", "SubjectId", "BatchId","ExamDeteils","date","RoomName"
+    };
 
+            foreach (var columnName in hiddenColumns)
+            {
+                if (ResultGrid.Columns.Contains(columnName))
+                    ResultGrid.Columns[columnName].Visible = false;
+            }
+
+            // Columns to show
+            string[] visibleColumns = { };
+
+            foreach (var columnName in visibleColumns)
+            {
+                if (ResultGrid.Columns.Contains(columnName))
+                    ResultGrid.Columns[columnName].Visible = true;
+            }
         }
+
 
         private readonly ExamController _examController = new ExamController();
         private readonly StudentController _studentController = new StudentController();
@@ -63,9 +68,6 @@ namespace C__UnicomManagementSystem.form
             // Load subjects for selected course
 
            
-
-
-          
             // Load Exams
             var examList = _examController.GetAllExams();
             ExamCB.DataSource = examList;
@@ -79,13 +81,15 @@ namespace C__UnicomManagementSystem.form
         {
             if (CourseCB.SelectedValue != null && BatchCB.SelectedValue != null)
             {
-                int courseId = Convert.ToInt32(CourseCB.SelectedValue);
-                int batchId = Convert.ToInt32(BatchCB.SelectedValue);
-                var studentList = _studentController.GetStudentsByCourseAndBatch(courseId, batchId);
+                if (int.TryParse(CourseCB.SelectedValue.ToString(), out int courseId) &&
+                    int.TryParse(BatchCB.SelectedValue.ToString(), out int batchId))
+                {
+                    var studentList = _studentController.GetStudentsByCourseAndBatch(courseId, batchId);
 
-                StudentCB.DataSource = studentList;
-                StudentCB.DisplayMember = "StudentFullName";
-                StudentCB.ValueMember = "StudentId";
+                    StudentCB.DataSource = studentList;
+                    StudentCB.DisplayMember = "StudentFullName";
+                    StudentCB.ValueMember = "StudentId";
+                }
             }
         }
 
@@ -108,7 +112,9 @@ namespace C__UnicomManagementSystem.form
             int examId = Convert.ToInt32(ExamCB.SelectedValue);
             int courseId = Convert.ToInt32(CourseCB.SelectedValue);
             int subjectId = Convert.ToInt32(SubjectCB.SelectedValue);
-            int Batch = Convert.ToInt32(BatchCB.ValueMember);
+            
+            int Batch = Convert.ToInt32(BatchCB.SelectedValue);
+
 
             Exam result = new Exam
             {
@@ -117,7 +123,7 @@ namespace C__UnicomManagementSystem.form
                 ExamId = examId,
                 StudentId = studentId,
                 CourseId = courseId,
-                 SubjectId = subjectId,
+                SubjectId = subjectId,
                  BatchId  = Batch,
             };
 
@@ -149,17 +155,24 @@ namespace C__UnicomManagementSystem.form
 
         private void CourseCB_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (CourseCB.SelectedValue is int courseId)
+            if (int.TryParse(CourseCB.SelectedValue?.ToString(), out int courseId))
             {
+                // SubjectCB க்கு SubjectName லோடு பண்ணுறது
                 var subjectList = _courseController.GeSubjectName(courseId);
-
-             //   subjectList.Insert(0, new Subject { SubjectId = 0, SubjectName = "-- Select Subject --" });
-
                 SubjectCB.DataSource = subjectList;
                 SubjectCB.DisplayMember = "SubjectName";
                 SubjectCB.ValueMember = "SubjectId";
+
+                // CourseId கும் BatchId கும் அடிப்படையில Students லோடு பண்ணுறது
+                if (int.TryParse(BatchCB.SelectedValue?.ToString(), out int batchId))
+                {
+                    var studentList = _studentController.GetStudentsByCourseAndBatch(courseId, batchId);
+                    StudentCB.DataSource = studentList;
+                    StudentCB.DisplayMember = "StudentFullName";
+                    StudentCB.ValueMember = "StudentId";
+                }
             }
-           
+
 
         }
     }

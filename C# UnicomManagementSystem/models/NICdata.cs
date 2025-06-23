@@ -8,7 +8,7 @@ namespace C__UnicomManagementSystem.models
 {
     internal class NICdata
     {
-        public string NICId { get; set; }
+        public int  NICId { get; set; }
         public string NIC { get; set; }
         public string Role { get; set; }
         // public string StaffNIC { get; set; }

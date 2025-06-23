@@ -125,9 +125,9 @@ namespace C__UnicomManagementSystem.Controllers
             }
 
             return rooms;
-        } 
-        
-      
+        }
+
+
 
         // course ditals ahh tharum
         //public List<Course> GetAllSubject()
@@ -158,32 +158,32 @@ namespace C__UnicomManagementSystem.Controllers
 
         public List<Course> GetAllSubject()
         {
-            //  List<Course> Course = new List<Course>();
-            var Course = new List<Course>();
+            var CourseList = new List<Course>(); // Better name to avoid confusion with class name
+
             using (var conn = DataBasecon.GetConnection())
             {
-                var cmd = new SQLiteCommand(@" 
-                    SELECT  S.SubjectId,S.SubjectName,S.CourseId,C.CourseName AS CourseName
-                    FROM Subject_Table S
-                    LEFT JOIN Course_Table C ON S.CourseId = C.CourseId", conn);
+                var cmd = new SQLiteCommand(@"
+            SELECT S.SubjectId, S.SubjectName, S.CourseId, C.CourseName AS CourseName
+            FROM Subject_Table S
+            LEFT JOIN Course_Table C ON S.CourseId = C.CourseId", conn);
+
                 var reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
                     Course course = new Course
-                    // Course.Add(new Course
                     {
-                        SubjectId = reader.GetInt32(reader.GetOrdinal("SubjectId")),
-                        SubjectName = reader.GetString(reader.GetOrdinal("SubjectName")),
-                        CourseId = reader.GetInt32(reader.GetOrdinal("CourseId")),
-                        CourseName = reader.GetString(reader.GetOrdinal("CourseName"))
-
+                        SubjectName = reader["SubjectName"]?.ToString() ?? "N/A",
+                        CourseName = reader["CourseName"]?.ToString() ?? "N/A",
                     };
-                    Course.Add(course);
+
+                    CourseList.Add(course);
                 }
             }
 
-            return Course;
-        } public List<Course> GeSubjectName(int id)
+            return CourseList;
+        }
+
+        public List<Course> GeSubjectName(int id)
         {
             
             var Course = new List<Course>();

@@ -31,12 +31,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.Lecturer = new System.Windows.Forms.Button();
             this.managerAdd = new System.Windows.Forms.Button();
-            this.ADDSTAFF = new System.Windows.Forms.Button();
             this.CourseSubjectADD = new System.Windows.Forms.Button();
             this.BatchADD = new System.Windows.Forms.Button();
             this.ClassroomAdd = new System.Windows.Forms.Button();
-            this.EXamResulADD = new System.Windows.Forms.Button();
-            this.NICADD = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.TimeTable = new System.Windows.Forms.Button();
             this.Staff = new System.Windows.Forms.Button();
@@ -51,12 +48,9 @@
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.Controls.Add(this.Lecturer);
             this.panel2.Controls.Add(this.managerAdd);
-            this.panel2.Controls.Add(this.ADDSTAFF);
             this.panel2.Controls.Add(this.CourseSubjectADD);
             this.panel2.Controls.Add(this.BatchADD);
             this.panel2.Controls.Add(this.ClassroomAdd);
-            this.panel2.Controls.Add(this.EXamResulADD);
-            this.panel2.Controls.Add(this.NICADD);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.TimeTable);
             this.panel2.Controls.Add(this.Staff);
@@ -70,7 +64,7 @@
             // 
             // Lecturer
             // 
-            this.Lecturer.Location = new System.Drawing.Point(7, 199);
+            this.Lecturer.Location = new System.Drawing.Point(7, 259);
             this.Lecturer.Name = "Lecturer";
             this.Lecturer.Size = new System.Drawing.Size(127, 23);
             this.Lecturer.TabIndex = 25;
@@ -88,19 +82,9 @@
             this.managerAdd.UseVisualStyleBackColor = true;
             this.managerAdd.Click += new System.EventHandler(this.managerAdd_Click);
             // 
-            // ADDSTAFF
-            // 
-            this.ADDSTAFF.Location = new System.Drawing.Point(7, 404);
-            this.ADDSTAFF.Name = "ADDSTAFF";
-            this.ADDSTAFF.Size = new System.Drawing.Size(127, 23);
-            this.ADDSTAFF.TabIndex = 23;
-            this.ADDSTAFF.Text = "ADD Staff";
-            this.ADDSTAFF.UseVisualStyleBackColor = true;
-            this.ADDSTAFF.Click += new System.EventHandler(this.button8_Click);
-            // 
             // CourseSubjectADD
             // 
-            this.CourseSubjectADD.Location = new System.Drawing.Point(7, 288);
+            this.CourseSubjectADD.Location = new System.Drawing.Point(7, 346);
             this.CourseSubjectADD.Name = "CourseSubjectADD";
             this.CourseSubjectADD.Size = new System.Drawing.Size(127, 23);
             this.CourseSubjectADD.TabIndex = 21;
@@ -110,7 +94,7 @@
             // 
             // BatchADD
             // 
-            this.BatchADD.Location = new System.Drawing.Point(3, 259);
+            this.BatchADD.Location = new System.Drawing.Point(9, 317);
             this.BatchADD.Name = "BatchADD";
             this.BatchADD.Size = new System.Drawing.Size(127, 23);
             this.BatchADD.TabIndex = 20;
@@ -120,33 +104,13 @@
             // 
             // ClassroomAdd
             // 
-            this.ClassroomAdd.Location = new System.Drawing.Point(7, 317);
+            this.ClassroomAdd.Location = new System.Drawing.Point(7, 375);
             this.ClassroomAdd.Name = "ClassroomAdd";
             this.ClassroomAdd.Size = new System.Drawing.Size(127, 23);
             this.ClassroomAdd.TabIndex = 19;
             this.ClassroomAdd.Text = "Class Room";
             this.ClassroomAdd.UseVisualStyleBackColor = true;
             this.ClassroomAdd.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // EXamResulADD
-            // 
-            this.EXamResulADD.Location = new System.Drawing.Point(7, 141);
-            this.EXamResulADD.Name = "EXamResulADD";
-            this.EXamResulADD.Size = new System.Drawing.Size(127, 23);
-            this.EXamResulADD.TabIndex = 18;
-            this.EXamResulADD.Text = "Exam Result Add";
-            this.EXamResulADD.UseVisualStyleBackColor = true;
-            this.EXamResulADD.Click += new System.EventHandler(this.EXamResulADD_Click);
-            // 
-            // NICADD
-            // 
-            this.NICADD.Location = new System.Drawing.Point(7, 375);
-            this.NICADD.Name = "NICADD";
-            this.NICADD.Size = new System.Drawing.Size(127, 23);
-            this.NICADD.TabIndex = 17;
-            this.NICADD.Text = "NIC Ditals";
-            this.NICADD.UseVisualStyleBackColor = true;
-            this.NICADD.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -160,7 +124,7 @@
             // 
             // TimeTable
             // 
-            this.TimeTable.Location = new System.Drawing.Point(3, 230);
+            this.TimeTable.Location = new System.Drawing.Point(7, 288);
             this.TimeTable.Name = "TimeTable";
             this.TimeTable.Size = new System.Drawing.Size(127, 23);
             this.TimeTable.TabIndex = 15;
@@ -170,7 +134,7 @@
             // 
             // Staff
             // 
-            this.Staff.Location = new System.Drawing.Point(7, 346);
+            this.Staff.Location = new System.Drawing.Point(7, 404);
             this.Staff.Name = "Staff";
             this.Staff.Size = new System.Drawing.Size(127, 23);
             this.Staff.TabIndex = 12;
@@ -186,10 +150,11 @@
             this.Manager.TabIndex = 6;
             this.Manager.Text = "Manager";
             this.Manager.UseVisualStyleBackColor = true;
+            this.Manager.Click += new System.EventHandler(this.Manager_Click);
             // 
             // Exam
             // 
-            this.Exam.Location = new System.Drawing.Point(9, 170);
+            this.Exam.Location = new System.Drawing.Point(9, 230);
             this.Exam.Name = "Exam";
             this.Exam.Size = new System.Drawing.Size(127, 23);
             this.Exam.TabIndex = 4;
@@ -228,12 +193,9 @@
         private System.Windows.Forms.Button Staff;
         private System.Windows.Forms.Button TimeTable;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button NICADD;
-        private System.Windows.Forms.Button EXamResulADD;
         private System.Windows.Forms.Button CourseSubjectADD;
         private System.Windows.Forms.Button BatchADD;
         private System.Windows.Forms.Button ClassroomAdd;
-        private System.Windows.Forms.Button ADDSTAFF;
         private System.Windows.Forms.Button managerAdd;
         private System.Windows.Forms.Button Lecturer;
     }

@@ -58,7 +58,7 @@
             this.BatchdataGRV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.BatchdataGRV.Location = new System.Drawing.Point(480, 87);
             this.BatchdataGRV.Name = "BatchdataGRV";
-            this.BatchdataGRV.Size = new System.Drawing.Size(470, 176);
+            this.BatchdataGRV.Size = new System.Drawing.Size(440, 176);
             this.BatchdataGRV.TabIndex = 1;
             this.BatchdataGRV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BatchdataGRV_CellContentClick);
             this.BatchdataGRV.CellStateChanged += new System.Windows.Forms.DataGridViewCellStateChangedEventHandler(this.BatchdataGridView_CellStateChanged);

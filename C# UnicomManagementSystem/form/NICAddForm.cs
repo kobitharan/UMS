@@ -43,28 +43,38 @@ namespace C__UnicomManagementSystem.form
 
             try
             {
-                if (string.IsNullOrWhiteSpace(NICtextbox.Text) || (NICtextbox.Text).Length >= 14 || (NICtextbox.Text).Length <= 9)
+                string nic = NICtextbox.Text.Trim();
+
+                // Check if NIC is empty or not 10 or 12 digits
+                if (string.IsNullOrWhiteSpace(nic) || (nic.Length != 10 && nic.Length != 12))
                 {
-                    MessageBox.Show("Please Enter NIC NO Eg - 200507900830 .");
+                    MessageBox.Show("Please enter a valid NIC number. Eg: 200507900830 or 200507900V");
                     return;
                 }
+
+                // Optional: Validate only numbers or allow last char to be 'V'
+                if (!System.Text.RegularExpressions.Regex.IsMatch(nic, @"^\d{9}[Vv]?$|^\d{12}$"))
+                {
+                    MessageBox.Show("NIC format is invalid. Use 12 digits or 9 digits + 'V'.");
+                    return;
+                }
+
                 NICdata NICdata = new NICdata()
                 {
-                    NIC = (NICtextbox.Text),
+                    NIC = nic,
                     Role = RoleComboBox.Text,
                 };
-               
-               // MessageBox.Show("Please Enter NIC NO Eg ");
+
                 string getMessage = _NICADDController.AddNIC(NICdata);
                 MessageBox.Show(getMessage);
-                NICdGV();
-            }
 
+                NICdGV(); // Reload DataGrid
+            }
             catch (Exception ex)
             {
-                Console.WriteLine("Error while deleting course: " + ex.Message);
-                // Or log it
+                MessageBox.Show("Unexpected error occurred: " + ex.Message);
             }
+
         }
 
         private void DeleteButton_Click(object sender, EventArgs e)

@@ -25,5 +25,9 @@ namespace C__UnicomManagementSystem.Utilities
         {
             return _sessionData.ContainsKey(key) ? _sessionData[key] : null;
         }
+        public static void Clear()
+        {
+            _sessionData.Clear();
+        }
     }
 }

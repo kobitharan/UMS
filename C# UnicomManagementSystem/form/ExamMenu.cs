@@ -78,22 +78,25 @@ namespace C__UnicomManagementSystem.form
         }
         private void EXAMGV()
         {
-
-            var batches = _ExamController.GetAllExam(); // make sure this returns List<Batch>
-            Examdata.DataSource = batches;
+            var exams = _ExamController.GetAllExam(); // List<Exam> expected
+            Examdata.DataSource = exams;
             Examdata.ClearSelection();
-            // ClearInputs();
-            //  BatchdataGridView();
-            Examdata.Columns["CourseId"].Visible = false;
-            Examdata.Columns["BatchId"].Visible = false;
-            Examdata.Columns["SubjectId"].Visible = false;
-            Examdata.Columns["RoomId"].Visible = false;
-            Examdata.Columns["LecturerId"].Visible = false;
-            Examdata.Columns["LecturerName"].Visible = false;
-            Examdata.Columns["ExamId"].Visible = false;
-            Examdata.Columns["MarkId"].Visible = false;
-            Examdata.Columns["ExamName"].Visible = false;
-            // selectedId = -1;
+
+            // Hide unwanted columns safely
+            string[] hiddenColumns = {
+    "CourseId", "BatchId", "SubjectId", "StudenId", "StudentName",
+    "ExamDetails", "RoomId", "Rank", "LecturerId", "LecturerName",
+    "ExamId", "MarkId", "Mark", "ExamName"
+};
+
+            foreach (string col in hiddenColumns)
+            {
+                if (Examdata.Columns.Contains(col))
+                {
+                    Examdata.Columns[col].Visible = false;
+                }
+            }
+
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)

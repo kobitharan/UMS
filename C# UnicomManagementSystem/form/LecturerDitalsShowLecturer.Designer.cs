@@ -36,6 +36,7 @@
             // LecturerDitalsShow
             // 
             this.LecturerDitalsShow.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.LecturerDitalsShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LecturerDitalsShow.Location = new System.Drawing.Point(40, 80);
             this.LecturerDitalsShow.Name = "LecturerDitalsShow";
             this.LecturerDitalsShow.Size = new System.Drawing.Size(883, 352);

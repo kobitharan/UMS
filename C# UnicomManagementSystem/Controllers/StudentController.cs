@@ -27,10 +27,10 @@ namespace C__UnicomManagementSystem.Controllers
                 command.Parameters.AddWithValue("@Name", student.StudentFullName);
                 command.Parameters.AddWithValue("@NIC", student.StudentNIC);
                 command.Parameters.AddWithValue("@Address", student.Address);
-                command.Parameters.AddWithValue("@ContactNO", student. ContactNO);
+                command.Parameters.AddWithValue("@ContactNO", student.ContactNO);
                 command.Parameters.AddWithValue("@CourseID", student.CourseId);
                 command.Parameters.AddWithValue("@BatchId", student.BatchId);
-              
+
                 command.ExecuteNonQuery();
                 using (var idCmd = new SQLiteCommand("SELECT last_insert_rowid();", conn))
                 {
@@ -50,9 +50,9 @@ namespace C__UnicomManagementSystem.Controllers
                 command1.Parameters.AddWithValue("@Password", student.Password);
                 command1.Parameters.AddWithValue("@Status", "Active");
                 command1.Parameters.AddWithValue("@ALLID", $"Student {lastId}");
-                
-              
-               
+
+
+
 
                 command1.ExecuteNonQuery();
             }
@@ -71,16 +71,16 @@ namespace C__UnicomManagementSystem.Controllers
                 command.Parameters.AddWithValue("@CourseID", student.CourseId);
                 command.Parameters.AddWithValue("@UserName", student.UserName);
                 command.Parameters.AddWithValue("@Password", student.Password);
-                command.Parameters.AddWithValue("@BatchId", student.BatchId );
+                command.Parameters.AddWithValue("@BatchId", student.BatchId);
                 command.ExecuteNonQuery();
             }
 
         }
         //GetAllDitals
-         public List<Student> GetAllDitals(int Id)
+        public List<Student> GetAllDitals(int Id)
         {
-           
-            var students  = new List<Student >();
+
+            var students = new List<Student>();
             using (var conn = DataBasecon.GetConnection())
             {
                 var cmd = new SQLiteCommand(@" 
@@ -103,11 +103,11 @@ namespace C__UnicomManagementSystem.Controllers
                         //    BatchName = reader.GetString(reader.GetOrdinal("BatchName")),
                         //    CourseName = reader.GetString(reader.GetOrdinal("CourseName"))
                         StudentFullName = reader["StudentFullName"].ToString(),
-                    Address = reader["StudentAddress"].ToString(),
-                    ContactNO = reader["ContactNO"].ToString(),
-                    StudentNIC = reader["StudentNIC"].ToString(),
-                    BatchName = reader["BatchName"].ToString(),
-                    CourseName = reader["CourseName"].ToString(),
+                        Address = reader["StudentAddress"].ToString(),
+                        ContactNO = reader["ContactNO"].ToString(),
+                        StudentNIC = reader["StudentNIC"].ToString(),
+                        BatchName = reader["BatchName"].ToString(),
+                        CourseName = reader["CourseName"].ToString(),
                         CourseId = Convert.ToInt32(reader["CourseId"])
 
 
@@ -119,7 +119,7 @@ namespace C__UnicomManagementSystem.Controllers
 
             return students;
         }
-        public List<Student> GetAllADDTable( )
+        public List<Student> GetAllADDTable()
         {
 
             var Student = new List<Student>();
@@ -130,18 +130,18 @@ namespace C__UnicomManagementSystem.Controllers
                     FROM AddStudent_Table S
                     LEFT JOIN Course_Table C ON S.CourseId = C.CourseId
                     LEFT JOIN Batch_Table B ON S.BatchId = B.BatchId", conn);
-               // cmd.Parameters.AddWithValue("@Role", name);
+                // cmd.Parameters.AddWithValue("@Role", name);
                 var reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    Student  ST = new Student
+                    Student ST = new Student
                     {// AddId,Name,NIC,Address,ContactNO,CourseID,UserName,Password ,BatchId 
                         AddId = reader.GetInt32(reader.GetOrdinal("AddId")),
                         StudentFullName = reader.GetString(reader.GetOrdinal("Name")),
                         StudentNIC = reader.GetString(reader.GetOrdinal("NIC")),
                         ContactNO = reader.GetString(reader.GetOrdinal("ContactNO")),
                         CourseName = reader.GetString(reader.GetOrdinal("CourseName")),
-                       // SubjectName = reader.GetString(reader.GetOrdinal("SubjectName")),
+                        // SubjectName = reader.GetString(reader.GetOrdinal("SubjectName")),
                         UserName = reader.GetString(reader.GetOrdinal("UserName")),
                         Password = reader.GetString(reader.GetOrdinal("Password")),
                         Address = reader.GetString(reader.GetOrdinal("Address")),
@@ -199,18 +199,24 @@ namespace C__UnicomManagementSystem.Controllers
                 {
                     students.Add(new Student
                     {
-                        StudentId = Convert.ToInt32(reader["StudentId"]),
-                        StudentFullName = reader["StudentFullName"].ToString(),
-                        StudentNIC = reader["StudentNIC"].ToString(),
-                        Address = reader["StudentAddress"].ToString(),
-                        ContactNO = reader["ContactNO"].ToString(),
-                        CourseId = Convert.ToInt32(reader["CourseId"]),
-                        BatchId = Convert.ToInt32(reader["BatchId"])
+                        StudentId = reader["StudentId"] != DBNull.Value ? Convert.ToInt32(reader["StudentId"]) : 0,
+                        StudentFullName = reader["StudentFullName"]?.ToString() ?? "N/A"
                     });
                 }
-            }
 
-            return students;
+
+                return students;
+
+            }
+        }
+        public void DeleteNICById(int nicId)
+        {
+            using (var conn = DataBasecon.GetConnection())
+            {
+                var cmd = new SQLiteCommand("DELETE FROM NIC_Table WHERE NICId = @nicId", conn);
+                cmd.Parameters.AddWithValue("@nicId", nicId);
+                cmd.ExecuteNonQuery();
+            }
         }
 
     }
