@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.USName = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
             this.Lecturer = new System.Windows.Forms.Button();
             this.managerAdd = new System.Windows.Forms.Button();
             this.CourseSubjectADD = new System.Windows.Forms.Button();
@@ -40,9 +42,6 @@
             this.Manager = new System.Windows.Forms.Button();
             this.Exam = new System.Windows.Forms.Button();
             this.datapanel = new System.Windows.Forms.Panel();
-            this.lblDate = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.USName = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +49,6 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.Controls.Add(this.USName);
-            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.lblDate);
             this.panel2.Controls.Add(this.Lecturer);
             this.panel2.Controls.Add(this.managerAdd);
@@ -67,6 +65,23 @@
             this.panel2.Size = new System.Drawing.Size(143, 675);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // USName
+            // 
+            this.USName.AutoSize = true;
+            this.USName.Location = new System.Drawing.Point(54, 85);
+            this.USName.Name = "USName";
+            this.USName.Size = new System.Drawing.Size(0, 13);
+            this.USName.TabIndex = 28;
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.Location = new System.Drawing.Point(18, 28);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(0, 20);
+            this.lblDate.TabIndex = 26;
             // 
             // Lecturer
             // 
@@ -175,32 +190,6 @@
             this.datapanel.Size = new System.Drawing.Size(1036, 675);
             this.datapanel.TabIndex = 1;
             // 
-            // lblDate
-            // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.Location = new System.Drawing.Point(18, 28);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(0, 20);
-            this.lblDate.TabIndex = 26;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(54, 131);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "label2";
-            // 
-            // USName
-            // 
-            this.USName.AutoSize = true;
-            this.USName.Location = new System.Drawing.Point(54, 85);
-            this.USName.Name = "USName";
-            this.USName.Size = new System.Drawing.Size(0, 13);
-            this.USName.TabIndex = 28;
-            // 
             // LoginMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,7 +221,6 @@
         private System.Windows.Forms.Button managerAdd;
         private System.Windows.Forms.Button Lecturer;
         private System.Windows.Forms.Label USName;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label DateShow;
     }
 }
