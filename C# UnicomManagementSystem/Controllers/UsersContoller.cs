@@ -19,8 +19,7 @@ namespace C__UnicomManagementSystem.Controllers
             UPDATE Users_Table 
             SET UserName = @UserName,
                 Password = @Password,
-                Status = @Status,
-                ALLID = @ALLID
+                Status = @Status 
             WHERE UserId = @UserId", conn); // ALWAYS use WHERE to target specific row
 
                 command.Parameters.AddWithValue("@UserName", user.UserName);

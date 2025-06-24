@@ -12,60 +12,33 @@ using System.Windows.Forms;
 
 namespace C__UnicomManagementSystem.form
 {
-    public partial class LecturerDitals : Form
+    public partial class managersAddForm : Form
     {
-        StaffAddContoller _StaffAddContoller;
         AddController _AddController;
-
-        public LecturerDitals()
+        StaffAddContoller _StaffAddContoller;
+        public managersAddForm()
         {
+            InitializeComponent();
             _AddController = new AddController();
             _StaffAddContoller = new StaffAddContoller();
-            InitializeComponent();
-            LecturerSelectGV();
-            ClearForm();
+            menagerSelectGV();
         }
-        private void LecturerSelectGV()
-        {
 
-            var Data = _StaffAddContoller.GetAllADDTable("Lecturer"); // make sure this returns List<Batch>
-            Lecturer.DataSource = Data;
-            Lecturer.ClearSelection();
-           
-
-            Lecturer.Columns["StaffId"].Visible = false;
-            Lecturer.Columns["AddId"].Visible = false;
-            Lecturer.Columns["Role"].Visible = false;
-            
-        }
-        private void ClearForm()
+        private void SaveDitalsLecturer_Click(object sender, EventArgs e)
         {
-
-            
-            LName.Clear();
-            NIC.Clear();
-            Address.Clear();
-            CountactNo.Clear();
-            UserName.Clear();
-            Password.Clear();
-            Specialization.Clear();
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            // ClearForm();
-            if (Lecturer.SelectedRows.Count > 0)
+            if (ManagerdataGridView.SelectedRows.Count > 0)
             {
                 Staff staff = new Staff()
                 {
-                    AddId = Convert.ToInt32(Lecturer.SelectedRows[0].Cells["AddId"].Value),
-                    Name = LName.Text,
+                    AddId = Convert.ToInt32(ManagerdataGridView.SelectedRows[0].Cells["AddId"].Value),
+                    Name = Name.Text,
                     NIC = NIC.Text,
                     Address = Address.Text,
                     ContactNO = CountactNo.Text,
-                    UserName = UserName.Text,
+                    UserName = userName.Text,
                     Password = Password.Text,
                     Specialization = Specialization.Text,
-                    Role = "Lecturer"
+                    Role = "Manager"
                 };
 
                 _AddController.AddDital(staff);                        // Add staff details
@@ -73,11 +46,11 @@ namespace C__UnicomManagementSystem.form
             }
             else
             {
-                if (string.IsNullOrWhiteSpace(LName.Text) ||
+                if (string.IsNullOrWhiteSpace(Name.Text) ||
                     string.IsNullOrWhiteSpace(NIC.Text) ||
                     string.IsNullOrWhiteSpace(Address.Text) ||
                     string.IsNullOrWhiteSpace(CountactNo.Text) ||
-                    string.IsNullOrWhiteSpace(UserName.Text) ||
+                    string.IsNullOrWhiteSpace(userName.Text) ||
                     string.IsNullOrWhiteSpace(Password.Text) ||
                     string.IsNullOrWhiteSpace(Specialization.Text))
                 {
@@ -109,14 +82,14 @@ namespace C__UnicomManagementSystem.form
                 // If everything is valid, create Staff object
                 Staff staff = new Staff()
                 {
-                    Name = LName.Text.Trim(),
+                    Name = Name.Text.Trim(),
                     NIC = NIC.Text.Trim(),
                     Address = Address.Text.Trim(),
                     ContactNO = CountactNo.Text.Trim(),
-                    UserName = UserName.Text.Trim(),
+                    UserName = userName.Text.Trim(),
                     Password = Password.Text.Trim(),
                     Specialization = Specialization.Text.Trim(),
-                    Role = "Lecturer"
+                    Role = "Manager"
                 };
 
 
@@ -124,44 +97,68 @@ namespace C__UnicomManagementSystem.form
             }
 
             ClearForm();
-            LecturerSelectGV();
-
-
+            menagerSelectGV();
         }
-    
-
-        private void LecturerDitals_Load(object sender, EventArgs e)
+        private void ClearForm()
         {
 
+            Name.Clear();
+            NIC.Clear();
+            Address.Clear();
+            CountactNo.Clear();
+            userName.Clear();
+            Password.Clear();
+            Specialization.Clear();
+        }
+        private void menagerSelectGV()
+        {
+
+            var Data = _StaffAddContoller.GetAllADDTable("Manager"); // make sure this returns List<Batch>
+            ManagerdataGridView.DataSource = Data;
+            ManagerdataGridView.ClearSelection();
+            // ClearInputs();
+            //  BatchdataGridView();
+
+            ManagerdataGridView.Columns["StaffId"].Visible = false;
+            ManagerdataGridView.Columns["AddId"].Visible = false;
+            ManagerdataGridView.Columns["Role"].Visible = false;
+            // selectedId = -1;
         }
 
-        private void Lecturer_SelectionChanged(object sender, EventArgs e)
+        private void ManagerdataGridView_SelectionChanged(object sender, EventArgs e)
         {
-            //StaffGV
-            if (Lecturer.SelectedRows.Count > 0)
+            if (ManagerdataGridView.SelectedRows.Count > 0)
             {
                 // value = StaffGV.SelectedRows[0].Cells["AddId"].Value;
-                int AddId = Convert.ToInt32(Lecturer.SelectedRows[0].Cells["AddId"].Value);
-                LName.Text = Lecturer.SelectedRows[0].Cells["Name"].Value.ToString();
-                NIC.Text = Lecturer.SelectedRows[0].Cells["NIC"].Value.ToString();
-                Address.Text = Lecturer.SelectedRows[0].Cells["Address"].Value.ToString();
-                CountactNo.Text = Lecturer.SelectedRows[0].Cells["ContactNO"].Value.ToString();
-                UserName.Text = Lecturer.SelectedRows[0].Cells["UserName"].Value.ToString();
-                Password.Text = Lecturer.SelectedRows[0].Cells["Password"].Value.ToString();
-                Specialization.Text = Lecturer.SelectedRows[0].Cells["Specialization"].Value.ToString();
+                int AddId = Convert.ToInt32(ManagerdataGridView.SelectedRows[0].Cells["AddId"].Value);
+                Name.Text = ManagerdataGridView.SelectedRows[0].Cells["Name"].Value.ToString();
+                NIC.Text = ManagerdataGridView.SelectedRows[0].Cells["NIC"].Value.ToString();
+                Address.Text = ManagerdataGridView.SelectedRows[0].Cells["Address"].Value.ToString();
+                CountactNo.Text = ManagerdataGridView.SelectedRows[0].Cells["ContactNO"].Value.ToString();
+                userName.Text = ManagerdataGridView.SelectedRows[0].Cells["UserName"].Value.ToString();
+                Password.Text = ManagerdataGridView.SelectedRows[0].Cells["Password"].Value.ToString();
+                Specialization.Text = ManagerdataGridView.SelectedRows[0].Cells["Specialization"].Value.ToString();
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void DeletelecturerDitals_Click(object sender, EventArgs e)
         {
-            Staff staff = new Staff()
+           
+            if (ManagerdataGridView.SelectedRows.Count > 0)
             {
-                AddId = Convert.ToInt32(Lecturer.SelectedRows[0].Cells["AddId"].Value),
+                int id = Convert.ToInt32(ManagerdataGridView.SelectedRows[0].Cells["AddId"].Value);
 
-            };
-            _StaffAddContoller.DeleteAddtable(staff.AddId);
-            ClearForm();
-            LecturerSelectGV();
+                var confirm = MessageBox.Show("Are you sure you want to delete this record?", "Confirm", MessageBoxButtons.YesNo);
+                if (confirm == DialogResult.Yes)
+                {
+                    _StaffAddContoller.DeleteAddtable(id); // 💡 Call your method here
+                    menagerSelectGV(); // Refresh grid
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to delete.");
+            }
         }
     }
 }

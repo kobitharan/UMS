@@ -125,9 +125,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(46, 411);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 13);
+            this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 10;
-            this.label2.Text = "ContactNO";
+            this.label2.Text = "CountactNO";
             // 
             // label3
             // 

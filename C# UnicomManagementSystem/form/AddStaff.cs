@@ -101,18 +101,7 @@ namespace C__UnicomManagementSystem.form
             }
             else
             {
-                //Staff staff = new Staff()
-                //{
-                //    Name = SName.Text,
-                //    NIC = NIC.Text,
-                //    Address = Address.Text,
-                //    ContactNO = CountactNo.Text,
-                //    UserName = UserName.Text,
-                //    Password = password.Text,
-                //    Specialization = Specialization.Text,
-                //    Role = "Staff"
-                //};
-                // 1. Check for empty fields
+               
                 if (string.IsNullOrWhiteSpace(SName.Text) ||
                     string.IsNullOrWhiteSpace(NIC.Text) ||
                     string.IsNullOrWhiteSpace(Address.Text) ||

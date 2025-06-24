@@ -71,11 +71,12 @@ namespace C__UnicomManagementSystem.form
 
         private void Back_Click(object sender, EventArgs e)
         {
-           // Form1 loginform = new Form1();
-           // loginform.Show();
-           this.Close();
-           
-            
+            Application.Exit();
+            //Form1 loginform = new Form1();
+            // loginform.Show();
+
+          
+
         }
     }
 }

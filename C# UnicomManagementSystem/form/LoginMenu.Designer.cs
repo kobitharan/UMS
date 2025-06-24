@@ -40,12 +40,18 @@
             this.Manager = new System.Windows.Forms.Button();
             this.Exam = new System.Windows.Forms.Button();
             this.datapanel = new System.Windows.Forms.Panel();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.USName = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.USName);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.lblDate);
             this.panel2.Controls.Add(this.Lecturer);
             this.panel2.Controls.Add(this.managerAdd);
             this.panel2.Controls.Add(this.CourseSubjectADD);
@@ -64,7 +70,7 @@
             // 
             // Lecturer
             // 
-            this.Lecturer.Location = new System.Drawing.Point(7, 259);
+            this.Lecturer.Location = new System.Drawing.Point(7, 230);
             this.Lecturer.Name = "Lecturer";
             this.Lecturer.Size = new System.Drawing.Size(127, 23);
             this.Lecturer.TabIndex = 25;
@@ -124,7 +130,7 @@
             // 
             // TimeTable
             // 
-            this.TimeTable.Location = new System.Drawing.Point(7, 288);
+            this.TimeTable.Location = new System.Drawing.Point(9, 288);
             this.TimeTable.Name = "TimeTable";
             this.TimeTable.Size = new System.Drawing.Size(127, 23);
             this.TimeTable.TabIndex = 15;
@@ -154,7 +160,7 @@
             // 
             // Exam
             // 
-            this.Exam.Location = new System.Drawing.Point(9, 230);
+            this.Exam.Location = new System.Drawing.Point(9, 259);
             this.Exam.Name = "Exam";
             this.Exam.Size = new System.Drawing.Size(127, 23);
             this.Exam.TabIndex = 4;
@@ -169,6 +175,32 @@
             this.datapanel.Size = new System.Drawing.Size(1036, 675);
             this.datapanel.TabIndex = 1;
             // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.Location = new System.Drawing.Point(18, 28);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(0, 20);
+            this.lblDate.TabIndex = 26;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(54, 131);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "label2";
+            // 
+            // USName
+            // 
+            this.USName.AutoSize = true;
+            this.USName.Location = new System.Drawing.Point(54, 85);
+            this.USName.Name = "USName";
+            this.USName.Size = new System.Drawing.Size(0, 13);
+            this.USName.TabIndex = 28;
+            // 
             // LoginMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,6 +213,7 @@
             this.Text = "LoginMenu";
             this.Load += new System.EventHandler(this.LoginMenu_Load);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -198,5 +231,8 @@
         private System.Windows.Forms.Button ClassroomAdd;
         private System.Windows.Forms.Button managerAdd;
         private System.Windows.Forms.Button Lecturer;
+        private System.Windows.Forms.Label USName;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label DateShow;
     }
 }

@@ -96,9 +96,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(59, 31);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.Size = new System.Drawing.Size(149, 13);
             this.label4.TabIndex = 9;
-            this.label4.Text = "label4";
+            this.label4.Text = "Change UserName Password ";
             // 
             // UsersDetals
             // 
@@ -107,6 +107,7 @@
             this.UsersDetals.Name = "UsersDetals";
             this.UsersDetals.Size = new System.Drawing.Size(651, 150);
             this.UsersDetals.TabIndex = 10;
+            this.UsersDetals.SelectionChanged += new System.EventHandler(this.UsersDetals_SelectionChanged);
             // 
             // ActiveORDeactive
             // 

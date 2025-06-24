@@ -194,7 +194,9 @@ namespace C__UnicomManagementSystem.form
                 int BatchId = Convert.ToInt32(StudentDitalsShow.SelectedRows[0].Cells["BatchId"].Value);
                 int CourseId = Convert.ToInt32(StudentDitalsShow.SelectedRows[0].Cells["CourseId"].Value);
 
-                FullName.Text = StudentDitalsShow.SelectedRows[0].Cells["StudentName"].Value.ToString();
+              //  FullName.Text = StudentDitalsShow.SelectedRows[0].Cells["StudentName"].Value.ToString();
+
+         FullName.Text = StudentDitalsShow.SelectedRows[0].Cells["StudentFullName"].Value.ToString();
                 NIC.Text = StudentDitalsShow.SelectedRows[0].Cells["StudentNIC"].Value.ToString();
                 Address.Text = StudentDitalsShow.SelectedRows[0].Cells["Address"].Value.ToString();
                 ContactNO.Text = StudentDitalsShow.SelectedRows[0].Cells["ContactNO"].Value.ToString();

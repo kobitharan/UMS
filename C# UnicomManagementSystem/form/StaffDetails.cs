@@ -116,8 +116,10 @@ namespace C__UnicomManagementSystem.form
             List<NICdata> NICno = _NICADDController.GetNICCheck(staff.NIC);
             if (NICno.Count == 0)
             {
+                MessageBox.Show($"You Role90909809809808. Is not Correct.");
+
                 _AddController.TemrariAdd(staff);
-                return;
+               
             }
 
             else

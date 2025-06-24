@@ -47,8 +47,7 @@ namespace C__UnicomManagementSystem.Controllers
         }
         public void DeleteAddtable(int Id)//Delete courss -----
         {
-            try
-            {
+            
                 using (var conn = DataBasecon.GetConnection())
                 {
                     var cmd = new SQLiteCommand("DELETE FROM Add_Table WHERE AddId = @Id", conn);
@@ -58,11 +57,7 @@ namespace C__UnicomManagementSystem.Controllers
 
                 }
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error while deleting course: " + ex.Message);
-                // Or log it
-            }
-        }
+           
+
     }
 }

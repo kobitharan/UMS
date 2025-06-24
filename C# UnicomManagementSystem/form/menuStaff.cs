@@ -55,5 +55,10 @@ namespace C__UnicomManagementSystem.form
         {
             LoadForm3(new ExamResultADD());
         }
+
+        private void menuStaff_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

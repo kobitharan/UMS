@@ -23,13 +23,18 @@ namespace C__UnicomManagementSystem.form
             InitializeComponent();
 
             Selectuser();
-
+           
         }
+        private System.Windows.Forms.Label lblDate;
+
         public void Selectuser()
         {
             string Role = LoginDitals.Get("Role") as string;
 
-            //  MessageBox.Show($"Welcome, {Role}");
+            lblDate.Text = DateTime.Now.ToString("dd/MM/yyyy\n hh:mm tt");
+            lblDate.ForeColor = Color.Red;
+
+           
             if (Role == "Student")
             {
              //  EXamResulADD.Visible = false ;
@@ -207,14 +212,9 @@ namespace C__UnicomManagementSystem.form
         }
 
         private void button1_Click_1(object sender, EventArgs e)
-        { 
-         
-           
-                    Close();
-               
-           
-
-
+        {
+            Application.Exit();
+            // this.Close();
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -255,7 +255,7 @@ namespace C__UnicomManagementSystem.form
 
         private void managerAdd_Click(object sender, EventArgs e)
         {
-            LoadForm(new AddStaff());
+            LoadForm(new managersAddForm());
            
         }
 

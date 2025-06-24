@@ -66,11 +66,7 @@ namespace C__UnicomManagementSystem.Controllers
 
         {
           
-            if (string.IsNullOrEmpty(staff.Role))
-            {
-                MessageBox.Show("Please select a Role.");
-                return;
-            }
+           //check
                 //MessageBox.Show("Please enter both Name and Address.");
                 using (var conn = DataBasecon.GetConnection())
             {
@@ -94,7 +90,7 @@ namespace C__UnicomManagementSystem.Controllers
             {
                 //staffname 
                 int lastId;
-                
+              
                 var command = new SQLiteCommand($"INSERT INTO {staff.Role+"_Table"} (FullName,NIC,Address, ContactNO,Specialization) VALUES (@StaffFullName,@StaffNIC,@StaffAddress,@ContactNO,@Specialization);", conn);
                 command.Parameters.AddWithValue("@StaffFullName", staff.Name);
                 command.Parameters.AddWithValue("@StaffNIC", staff.NIC);

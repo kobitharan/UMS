@@ -158,6 +158,12 @@
     <Compile Include="form\ManagerForm.Designer.cs">
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="form\managersAddFormditals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\managersAddFormditals.Designer.cs">
+      <DependentUpon>managersAddFormditals.cs</DependentUpon>
+    </Compile>
     <Compile Include="form\MarkMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -304,6 +310,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="form\ManagerForm.resx">
       <DependentUpon>ManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\managersAddFormditals.resx">
+      <DependentUpon>managersAddFormditals.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="form\MarkMenu.resx">
       <DependentUpon>MarkMenu.cs</DependentUpon>

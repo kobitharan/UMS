@@ -67,5 +67,17 @@ namespace C__UnicomManagementSystem.form
             StaffSelectGV();
             MessageBox.Show(" Updated Successfully");
         }
+
+        private void UsersDetals_SelectionChanged(object sender, EventArgs e)
+        {
+            if (UsersDetals.SelectedRows.Count > 0)
+            {
+                // value = StaffGV.SelectedRows[0].Cells["AddId"].Value;
+
+                Usernamess.Text = UsersDetals.SelectedRows[0].Cells["UserName"].Value.ToString();
+                Password.Text = UsersDetals.SelectedRows[0].Cells["Password"].Value.ToString();
+                ActiveORDeactive.Text = UsersDetals.SelectedRows[0].Cells["Status"].Value.ToString();
+            }
+        }
     }
 }

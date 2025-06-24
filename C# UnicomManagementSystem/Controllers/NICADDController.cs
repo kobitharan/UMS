@@ -50,7 +50,7 @@ namespace C__UnicomManagementSystem.Controllers
             catch (Exception ex)
             {
                 // Optional: Log the error, or rethrow with custom message
-                Console.WriteLine("Error loading courses: " + ex.Message);
+               
             }
 
             return NIC;
@@ -89,7 +89,7 @@ namespace C__UnicomManagementSystem.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error while deleting NIC: " + ex.Message);
+             
                 // Optionally log it to a file or UI
             }
         }

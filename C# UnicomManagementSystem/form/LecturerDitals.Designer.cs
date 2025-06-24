@@ -44,7 +44,7 @@
             this.UserName = new System.Windows.Forms.TextBox();
             this.Lecturer = new System.Windows.Forms.DataGridView();
             this.Specialization = new System.Windows.Forms.RichTextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Delete1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Lecturer)).BeginInit();
@@ -197,15 +197,15 @@
             this.Specialization.TabIndex = 18;
             this.Specialization.Text = "";
             // 
-            // button2
+            // Delete1
             // 
-            this.button2.Location = new System.Drawing.Point(477, 509);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 40);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Delete1.Location = new System.Drawing.Point(477, 509);
+            this.Delete1.Name = "Delete1";
+            this.Delete1.Size = new System.Drawing.Size(125, 40);
+            this.Delete1.TabIndex = 19;
+            this.Delete1.Text = "Delete";
+            this.Delete1.UseVisualStyleBackColor = true;
+            this.Delete1.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -234,7 +234,7 @@
             this.ClientSize = new System.Drawing.Size(1012, 582);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Delete1);
             this.Controls.Add(this.Specialization);
             this.Controls.Add(this.Lecturer);
             this.Controls.Add(this.UserName);
@@ -280,7 +280,7 @@
         private System.Windows.Forms.TextBox UserName;
         private System.Windows.Forms.DataGridView Lecturer;
         private System.Windows.Forms.RichTextBox Specialization;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Delete1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
     }

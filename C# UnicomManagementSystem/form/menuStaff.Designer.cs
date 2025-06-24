@@ -114,6 +114,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "menuStaff";
             this.Text = "menuStaff";
+            this.Load += new System.EventHandler(this.menuStaff_Load);
             this.ResumeLayout(false);
 
         }
