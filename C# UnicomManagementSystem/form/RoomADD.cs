@@ -55,10 +55,13 @@ namespace C__UnicomManagementSystem.form
         {
             if (!string.IsNullOrWhiteSpace(RoomName.Text))
             {
-                Room room = new Room();
-                room.RoomName = RoomName.Text;
+                Room room = new Room
+                {
+                    RoomName  = RoomName.Text,
+                    RoomId = Convert.ToInt32(dataShow.SelectedRows[0].Cells["RoomId"].Value)
+                };
 
-                string getMessage = _RoomController.UpdateRoom(room);
+                string getMessage = _RoomController.DeleteRoom(room);
                 MessageBox.Show(getMessage);
                 RoomdGV();
                 RoomName.Clear();
@@ -66,6 +69,18 @@ namespace C__UnicomManagementSystem.form
                 //  string getMessage = _AddController.UpdateRoom(room);
                 // MessageBox.Show(getMessage);
                 // RoomdGV();
+            }
+        }
+
+        private void dataShow_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataShow.SelectedRows.Count > 0)
+            {
+                RoomName.Text = dataShow.SelectedRows[0].Cells["RoomName"].Value.ToString();
+            }
+            else
+            {
+                RoomName.Clear();
             }
         }
     }

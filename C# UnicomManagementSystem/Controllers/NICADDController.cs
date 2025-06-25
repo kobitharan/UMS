@@ -93,9 +93,9 @@ namespace C__UnicomManagementSystem.Controllers
                 // Optionally log it to a file or UI
             }
         }
-        public List<NICdata> GetNICCheck(string nicNo)
+        public NICdata GetNICCheck(string nicNo)
         {
-            var nicList = new List<NICdata>();
+          
 
             using (var conn = DataBasecon.GetConnection())
             {
@@ -105,19 +105,19 @@ namespace C__UnicomManagementSystem.Controllers
 
                 using (var reader = cmd.ExecuteReader())
                 {
-                    while (reader.Read())
+                    if (reader.Read())
                     {
-                        nicList.Add(new NICdata
+                        return new NICdata
                         {
                             NICId = reader.GetInt32(reader.GetOrdinal("NICId")),
                             NIC = reader.GetString(reader.GetOrdinal("NIC")),
                             Role = reader.GetString(reader.GetOrdinal("Role"))
-                        });
+                        };
                     }
                 }
             }
 
-            return nicList;
+            return null;
 
         }
 

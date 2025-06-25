@@ -95,31 +95,26 @@ namespace C__UnicomManagementSystem
             var password1 = Password.Text;
             
             var users = LoginController.Getusers(username1, password1);
-            // LoadForm(new LoginMenu());
 
-            //MessageBox.Show($"Welcome, {users}");
-           
-           
 
-            if (users == null || users.Count == 0)
+            // If no user is found
+            if (users == null )
             {
-                MessageBox.Show("Your correct userName And password Enter pless..  ");
+                MessageBox.Show("Please enter correct username and password.");
                 return;
-                   
-                }
-            else
+            }
+            else if (users.Status == "Active")// Active user found Checking status
             {
-                foreach (var user in users)
-                {
-                   // string ALLID = user.ALLID;
-                    string[] name= user.ALLID.Split(' ');
-                    LoginDitals.Set("LoginID", name[1]);
-                    LoginDitals.Set("Role", name[0]);
-                    LoginDitals.Set("username", user.UserName);
-                    LoginDitals.Set("UserId", user.UserId);
-                    LoginDitals.Set("Password", user.Password);
 
-                }
+                string[] name = users.ALLID.Split(' ');
+                LoginDitals.Set("LoginID", name[1]);
+                LoginDitals.Set("Role", name[0]);
+                LoginDitals.Set("username", users.UserName);
+                LoginDitals.Set("UserId", users.UserId);
+                LoginDitals.Set("Password", users.Password);
+
+             
+                
                 CreatAccount.Visible = false;
                 namelabel.Visible = false;
                 UserName.Visible = false;
@@ -129,6 +124,14 @@ namespace C__UnicomManagementSystem
                 Login.Visible = false;
                 exit.Visible = false;                   
                 LoadForm(new LoginMenu());           
+            }
+            else if (users.Status == "Inactive")
+            {
+                MessageBox.Show("Your account is inactive. Please contact the administrator.");
+            }
+            else
+            {
+                MessageBox.Show("An unexpected error occurred. Please try again later.");
             }
         }
 
@@ -149,8 +152,10 @@ namespace C__UnicomManagementSystem
 
         private void exti_Click(object sender, EventArgs e)
         {
-           // Environment.Exit(0);
-            this.Close();
+            // Environment.Exit(0);
+            // Close the application gracefully
+            Application.Exit();
+           
 
         }
 

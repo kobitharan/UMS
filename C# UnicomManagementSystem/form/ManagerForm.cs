@@ -45,6 +45,11 @@ namespace C__UnicomManagementSystem.form
         {
             LoadForm(new GetDataShow());
         }
+
+        private void LecturerAddd_Click(object sender, EventArgs e)
+        {
+            LoadForm(new LecturerDitals());
+        }
     }
 
 }

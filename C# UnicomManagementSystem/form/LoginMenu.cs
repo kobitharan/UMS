@@ -99,7 +99,7 @@ namespace C__UnicomManagementSystem.form
               //  NICADD.Visible = true;
               //  ADDSTAFF.Visible = true;
                 Manager.Visible = true;
-                Lecturer.Visible = true;
+                Lecturer.Visible = false ;
                 managerAdd.Visible = false;
                
                 LoadForm(new LecturerMenu());//LecturerMenu
@@ -118,7 +118,7 @@ namespace C__UnicomManagementSystem.form
               //  ADDSTAFF.Visible = true;
                 Manager.Visible = true;
                 managerAdd.Visible = true;
-                Lecturer.Visible = true;
+                Lecturer.Visible = false;
             }
                 
 

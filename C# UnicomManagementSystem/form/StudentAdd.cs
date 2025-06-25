@@ -93,7 +93,7 @@ namespace C__UnicomManagementSystem.form
             };
 
             // Check if NIC already exists in NIC_Table
-            List<NICdata> nicList = _NICADDController.GetNICCheck(student.StudentNIC);
+           var nicList = _NICADDController.GetNICCheck(student.StudentNIC);
 
             // Check if username already exists in Students_Table or AddStudent_Table
             bool isUsernameExists = _LoginController.IsUserNameExists(student.UserName);
@@ -104,23 +104,27 @@ namespace C__UnicomManagementSystem.form
                 return;
             }
 
-            if (nicList.Count == 0)
+            if (nicList == null)
             {
-                // NIC not found in NIC table: means new student
-                _studentController.TemrariAddStudent(student);  // Temp table?
-                MessageBox.Show("Student added temporarily.");
+                // NIC not found → add to temporary table
+                _studentController.TemrariAddStudent(student);  // Temp holding
+                MessageBox.Show("Student added temporarily (NIC not registered).");
                 ClearForm();
                 return;
             }
-            else
-            {
-                MessageBox.Show("You have already selected this course.");
-                _studentController.AddStudent(student);  // Final add
-                var nic = nicList[0];
-                _studentController.DeleteNICById(nic.NICId);  // Final add
+         //   If NIC is found → allow final registration
+               var nic = nicList; 
 
-                ClearForm();
+            if (nic.Role != student.Role)
+            {
+                MessageBox.Show($"NIC role mismatch! NIC role: '{nic.Role}', Your role: '{student.Role}'.");
+                return;
             }
+
+            _studentController.AddStudent(student);
+            _studentController.DeleteNICById(nic.NICId);
+            MessageBox.Show("Student added successfully.");
+            ClearForm();
         }
 
 

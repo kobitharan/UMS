@@ -32,7 +32,7 @@
             this.RoomName = new System.Windows.Forms.TextBox();
             this.dataShow = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.Update = new System.Windows.Forms.Button();
+            this.delete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataShow)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,6 +60,7 @@
             this.dataShow.Name = "dataShow";
             this.dataShow.Size = new System.Drawing.Size(240, 184);
             this.dataShow.TabIndex = 2;
+            this.dataShow.SelectionChanged += new System.EventHandler(this.dataShow_SelectionChanged);
             // 
             // label1
             // 
@@ -70,22 +71,22 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Enter Class Room Name";
             // 
-            // Update
+            // delete
             // 
-            this.Update.Location = new System.Drawing.Point(253, 293);
-            this.Update.Name = "Update";
-            this.Update.Size = new System.Drawing.Size(127, 83);
-            this.Update.TabIndex = 4;
-            this.Update.Text = "Update";
-            this.Update.UseVisualStyleBackColor = true;
-            this.Update.Click += new System.EventHandler(this.Update_Click);
+            this.delete.Location = new System.Drawing.Point(253, 293);
+            this.delete.Name = "delete";
+            this.delete.Size = new System.Drawing.Size(127, 83);
+            this.delete.TabIndex = 4;
+            this.delete.Text = "Delete";
+            this.delete.UseVisualStyleBackColor = true;
+            this.delete.Click += new System.EventHandler(this.Update_Click);
             // 
             // RoomADD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1012, 582);
-            this.Controls.Add(this.Update);
+            this.Controls.Add(this.delete);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataShow);
             this.Controls.Add(this.RoomName);
@@ -105,6 +106,6 @@
         private System.Windows.Forms.TextBox RoomName;
         private System.Windows.Forms.DataGridView dataShow;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button Update;
+        private System.Windows.Forms.Button delete;
     }
 }

@@ -17,13 +17,14 @@ namespace C__UnicomManagementSystem.form
     {
         private readonly NICADDController _NICADDController;
         private readonly AddController _AddController;
+        private readonly StudentController _studentController;
         private string Role; 
        // private string text;
         public StaffDetails(string userRole)
         {
             InitializeComponent();/////////////// this form ADD all staff, admin, lecsurer..........................
             Role = userRole;
-
+            _studentController = new StudentController();
             _NICADDController = new NICADDController();
             _AddController =new AddController();
            
@@ -58,16 +59,13 @@ namespace C__UnicomManagementSystem.form
                 MessageBox.Show("Please enter NIC.");
                 return;
             }
-            if (nic.Length != 10 && nic.Length != 12)
+          
+            if (!System.Text.RegularExpressions.Regex.IsMatch(nic, @"^(\d{9}[vVxX]|\d{12})$"))
             {
-                MessageBox.Show("NIC must be 10 or 12 characters long.");
+                MessageBox.Show("Invalid NIC format. Enter 9 digits with 'V' or 12-digit new format.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (!long.TryParse(nic, out _))
-            {
-                MessageBox.Show("NIC must contain only numbers.");
-                return;
-            }
+           
             if (string.IsNullOrWhiteSpace(Address.Text))
             {
                 MessageBox.Show("Please Enter Address.");
@@ -80,18 +78,19 @@ namespace C__UnicomManagementSystem.form
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(username.Text))
+          
+            if (!System.Text.RegularExpressions.Regex.IsMatch(username.Text, @"^[A-Za-z][A-Za-z0-9_]{3,}$"))
             {
-                MessageBox.Show("Please Enter Username.");
+                MessageBox.Show("Invalid username. Must start with a letter, contain only letters, numbers, or underscore, and be at least 4 characters long.",
+                                "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
-            if (string.IsNullOrWhiteSpace(password.Text))
+           
+            if (password.Text.Length < 6)
             {
-                MessageBox.Show("Please Enter Password.");
+                MessageBox.Show("Password must be at least 6 characters long.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
             if (string.IsNullOrWhiteSpace(Specialization.Text))
             {
                 MessageBox.Show("Please Enter Specialization.");
@@ -113,39 +112,30 @@ namespace C__UnicomManagementSystem.form
                 // BatchId = Convert.ToInt32(batch.SelectedValue),
             };
 
-            List<NICdata> NICno = _NICADDController.GetNICCheck(staff.NIC);
-            if (NICno.Count == 0)
+            var nicResult = _NICADDController.GetNICCheck(staff.NIC);
+            if (nicResult == null)
             {
-                MessageBox.Show($"You Role90909809809808. Is not Correct.");
+                //ADD to temporary table if NIC not found User is new
 
                 _AddController.TemrariAdd(staff);
-               
+
             }
 
             else
             {
-                bool roleMatched = NICno.Any(n => n.Role == staff.Role);
-
-
-                MessageBox.Show(" Your Select THis Course.");
-
-                //_AddController.AddDital(staff);
-               
-                if (roleMatched)
+                if (nicResult.Role == staff.Role)
                 {
-                    MessageBox.Show("You  selected this course.");
+                    MessageBox.Show("ADD Success.");
                     _AddController.AddDital(staff);
-                    ClearForm();
+                    _studentController.DeleteNICById(nicResult.NICId); // ← Fix here
                 }
                 else
                 {
-                    // if needed
-                    MessageBox.Show($"You Role{staff.Role}. Is not Correct.");
-
+                    MessageBox.Show($"Your role '{staff.Role}' does not match NIC role '{nicResult.Role}'.");
                 }
+
             }
             ClearForm();
-
         }
-    }
+     }
 }

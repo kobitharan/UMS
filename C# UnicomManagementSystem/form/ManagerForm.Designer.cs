@@ -32,6 +32,7 @@
             this.Stafff = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.NICADDD = new System.Windows.Forms.Button();
+            this.LecturerAddd = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Managerpanel
@@ -71,11 +72,22 @@
             this.NICADDD.UseVisualStyleBackColor = true;
             this.NICADDD.Click += new System.EventHandler(this.NICADDD_Click);
             // 
+            // LecturerAddd
+            // 
+            this.LecturerAddd.Location = new System.Drawing.Point(383, 12);
+            this.LecturerAddd.Name = "LecturerAddd";
+            this.LecturerAddd.Size = new System.Drawing.Size(99, 39);
+            this.LecturerAddd.TabIndex = 5;
+            this.LecturerAddd.Text = "Lecturer Add";
+            this.LecturerAddd.UseVisualStyleBackColor = true;
+            this.LecturerAddd.Click += new System.EventHandler(this.LecturerAddd_Click);
+            // 
             // ManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1036, 675);
+            this.Controls.Add(this.LecturerAddd);
             this.Controls.Add(this.NICADDD);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Stafff);
@@ -93,5 +105,6 @@
         private System.Windows.Forms.Button Stafff;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button NICADDD;
+        private System.Windows.Forms.Button LecturerAddd;
     }
 }

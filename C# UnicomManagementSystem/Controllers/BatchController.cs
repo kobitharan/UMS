@@ -1,4 +1,5 @@
 ﻿using C__UnicomManagementSystem.Data;
+using C__UnicomManagementSystem.form;
 using C__UnicomManagementSystem.models;
 using System;
 using System.Collections.Generic;
@@ -69,6 +70,25 @@ namespace C__UnicomManagementSystem.Controllers
 
                 return "Course Added Successfully!";
             }
-        
-    }
+        public string DeleteBatch(Batches batches)
+        {
+            using (var conn = DataBasecon.GetConnection())
+            {
+                try
+                {
+
+                    var command = new SQLiteCommand("DELETE FROM Batch_Table WHERE BatchId = @Id", conn);
+                    command.Parameters.AddWithValue("@Id", batches.BatchId);
+                    int rows = command.ExecuteNonQuery();
+
+
+                    return "Deleted Successfully!";
+
+                }
+                catch (Exception ex)
+                {
+                    return "Error: " + ex.Message;
+                }
+            }
+    }   }
 }

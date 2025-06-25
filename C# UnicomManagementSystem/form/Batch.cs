@@ -119,8 +119,22 @@ namespace C__UnicomManagementSystem.form
 
         private void Deletebutton_Click(object sender, EventArgs e)
         {
+            if (BatchdataGRV.SelectedRows.Count > 0)
+            {
+                Batches batch = new Batches
+                {
+                    BatchId = Convert.ToInt32(BatchdataGRV.SelectedRows[0].Cells["BatchId"].Value)
+                };
+                string getMessage = _BatchController.DeleteBatch(batch);
+                MessageBox.Show(getMessage);
+                BatchGV();
+                Cleardata();
+            }
+            else
+            {
+                MessageBox.Show("Please select a batch to delete.");
 
-
+            }
         }
 
         private void BatchdataGRV_SelectionChanged(object sender, EventArgs e)

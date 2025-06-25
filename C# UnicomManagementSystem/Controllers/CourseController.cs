@@ -253,29 +253,7 @@ namespace C__UnicomManagementSystem.Controllers
                 // Or log it
             }
         }
-        //public Course GetCourseById(int id)
-        //{
-        //    using (var conn = DataBasecon.GetConnection())
-        //    {
-        //        var cmd = new SQLiteCommand("SELECT CourseName FROM Course_Table WHERE Id = @Id", conn);
-        //        cmd.Parameters.AddWithValue("@Id", id);
-
-        //        using (var reader = cmd.ExecuteReader())
-        //        {
-        //            if (reader.Read())
-        //            {
-        //                return new Course
-        //                {
-        //                    // CourseId = reader.GetInt32(0),
-        //                    CourseName = reader.GetString(1),
-
-        //                };
-        //            }
-        //        }
-        //    }
-
-        //    return null;
-        //}
+       
         public void UpdateCourse(Course course)
         {
             using (var conn = DataBasecon.GetConnection())
@@ -286,14 +264,22 @@ namespace C__UnicomManagementSystem.Controllers
                 command.ExecuteNonQuery();
             }
         }
-        public void UpdateSubject(Subject Subject)
+        public void UpdateSubject(Subject subject)
         {
             using (var conn = DataBasecon.GetConnection())
             {
-                var command = new SQLiteCommand("UPDATE Subject_Table SET SubjectName = @Name WHERE SubjectId = @Id", conn);
-                command.Parameters.AddWithValue("@Name", Subject.SubjectName);
-                command.Parameters.AddWithValue("@Id",Subject.SubjectId);
-                command.ExecuteNonQuery();
+                try
+                {
+                    var command = new SQLiteCommand("UPDATE Subject_Table SET SubjectName = @Name, CourseId = @CourseId WHERE SubjectId = @Id", conn);
+                    command.Parameters.AddWithValue("@Name", subject.SubjectName);
+                    command.Parameters.AddWithValue("@CourseId", subject.CourseId);
+                    command.Parameters.AddWithValue("@Id", subject.SubjectId);
+                    command.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error updating subject: " + ex.Message);
+                }
             }
         }
     }

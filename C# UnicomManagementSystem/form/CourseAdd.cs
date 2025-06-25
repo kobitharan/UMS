@@ -10,6 +10,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 using System.Xml.Linq;
 
 namespace C__UnicomManagementSystem.form
@@ -226,11 +227,6 @@ namespace C__UnicomManagementSystem.form
 
         private void Change_Click(object sender, EventArgs e)
         {
-            //if (selectedId == -1)
-            //{
-            //    MessageBox.Show("Please select a Course to update.");
-            //    return;
-            //}
             if (Selectmodel.Text == "Subject")
             {
                 if (string.IsNullOrWhiteSpace(Sname.Text))
@@ -243,11 +239,12 @@ namespace C__UnicomManagementSystem.form
                 {
 
                    SubjectId = Convert.ToInt32(dataGridView.SelectedRows[0].Cells["SubjectId"].Value),
+                   CourseId = Convert.ToInt32(dataGridView.SelectedRows[0].Cells["CourseId"].Value),
                     SubjectName = Sname.Text,
                    
                    //CourseId = Convert.ToInt32(dataGridView.SelectedRows[0].Cells["CourseId"])
                 };
-
+               
                 _CourseController.UpdateSubject(Subject);
                 GVLoadSubject();
                 ClearInputs();
@@ -258,9 +255,12 @@ namespace C__UnicomManagementSystem.form
 
         private void Selectmodel_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             if (Selectmodel.Text == "Subject")
             {
                 // Sname.Visible = true;
+                Update.Visible = true  ;
+
                 Cname.Visible = false;
                 Delete.Visible = true;
                 Course.Visible = true;
@@ -274,6 +274,7 @@ namespace C__UnicomManagementSystem.form
             {
                 GVLoadCourse();
 
+                Update.Visible = false ;
                 Cname.Visible = true;
                 Course.Visible = false;
                 SubjectName.Visible = false;

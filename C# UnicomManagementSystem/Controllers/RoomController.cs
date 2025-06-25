@@ -1,4 +1,5 @@
 ﻿using C__UnicomManagementSystem.Data;
+using C__UnicomManagementSystem.form;
 using C__UnicomManagementSystem.models;
 using System;
 using System.Collections.Generic;
@@ -64,16 +65,27 @@ namespace C__UnicomManagementSystem.Controllers
 
             return "Course Added Successfully!";
         }
-        public string  UpdateRoom(Room room)
+        public string  DeleteRoom(Room room)
         {
             using (var conn = DataBasecon.GetConnection())
             {
-                var command = new SQLiteCommand("UPDATE Course_Table SET CourseName = @Name WHERE CourseId = @Id", conn);
-                command.Parameters.AddWithValue("@Name", room.RoomName);
-                
-                command.ExecuteNonQuery();
+                try
+                {
+                   
+                    var command = new SQLiteCommand("DELETE FROM Room_Table WHERE RoomId = @Id", conn);
+                    command.Parameters.AddWithValue("@Id", room.RoomId);
+                    int rows = command.ExecuteNonQuery();
+
+                    if (rows > 0)
+                        return "Deleted Successfully!";
+                    else
+                        return "Room not found!";
+                }
+                catch (Exception ex)
+                {
+                    return "Error: " + ex.Message;
+                }
             }
-            return "Update  Successfully!";
         }
     }
 }

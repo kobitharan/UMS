@@ -15,9 +15,9 @@ namespace C__UnicomManagementSystem.Controllers
 {
     internal class LoginController
     {
-        public static List<User> Getusers(string username,string password )
+        public static User  Getusers(string username,string password )
         {
-            var users = new List <User>();
+          
             using(var conn = DataBasecon.GetConnection())
             {
                 var cmd = new SQLiteCommand(@"
@@ -29,23 +29,21 @@ namespace C__UnicomManagementSystem.Controllers
                 cmd.Parameters.AddWithValue("@Password", password);
                 var reader = cmd.ExecuteReader();
                int Count = 0;
-                while (reader.Read())
+                if (reader.Read())
                 {
-                    User user = new User
+                    return new User
                     {
                         UserId = reader.GetInt32(0),
                         UserName = reader.GetString(1),
                         Password = reader.GetString(2),
                         Status = reader.GetString(3),
                         ALLID = reader.GetString(4),
-                       
-
                     };
-                    users.Add(user);
-                   
                 }
-               // if (user.UserId == null )
-                 return users;
+                else
+                {
+                    return null; // no user found
+                }
             }
           
         }
