@@ -73,10 +73,20 @@ namespace C__UnicomManagementSystem.form
         private void Back_Click(object sender, EventArgs e)
         {
            // Application.Exit();
-            //Form1 loginform = new Form1();
-            // loginform.Show();
+            //   //Form1 loginform = new Form1();
+            //   //loginform.Show();
+            //   this.Hide();
+            // //  panel1.Visible = true;
+            ////   panel1.BringToFront();
 
-          
+
+            //   loginform main = new loginform();
+            // // main.Show();
+           Application.Restart(); // Completely restarts the application
+             
+            this.Hide();
+           // new Form1().Show();
+
 
         }
     }

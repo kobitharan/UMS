@@ -1,391 +1,394 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-	<PropertyGroup>
-		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-		<ProjectGuid>{2A3574BC-210B-41B1-961F-0C9E0A3B8537}</ProjectGuid>
-		<OutputType>WinExe</OutputType>
-		<RootNamespace>C__UnicomManagementSystem</RootNamespace>
-		<AssemblyName>C# UnicomManagementSystem</AssemblyName>
-		<TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-		<FileAlignment>512</FileAlignment>
-		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-		<Deterministic>true</Deterministic>
-		<NuGetPackageImportStamp>
-		</NuGetPackageImportStamp>
-	</PropertyGroup>
-	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-		<PlatformTarget>AnyCPU</PlatformTarget>
-		<DebugSymbols>true</DebugSymbols>
-		<DebugType>full</DebugType>
-		<Optimize>false</Optimize>
-		<OutputPath>bin\Debug\</OutputPath>
-		<DefineConstants>DEBUG;TRACE</DefineConstants>
-		<ErrorReport>prompt</ErrorReport>
-		<WarningLevel>4</WarningLevel>
-	</PropertyGroup>
-	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-		<PlatformTarget>AnyCPU</PlatformTarget>
-		<DebugType>pdbonly</DebugType>
-		<Optimize>true</Optimize>
-		<OutputPath>bin\Release\</OutputPath>
-		<DefineConstants>TRACE</DefineConstants>
-		<ErrorReport>prompt</ErrorReport>
-		<WarningLevel>4</WarningLevel>
-	</PropertyGroup>
-	<ItemGroup>
-		<Reference Include="System" />
-		<Reference Include="System.Core" />
-		<Reference Include="System.Data.SQLite, Version=1.0.119.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
-			<HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\lib\net46\System.Data.SQLite.dll</HintPath>
-		</Reference>
-		<Reference Include="System.Xml.Linq" />
-		<Reference Include="System.Data.DataSetExtensions" />
-		<Reference Include="Microsoft.CSharp" />
-		<Reference Include="System.Data" />
-		<Reference Include="System.Deployment" />
-		<Reference Include="System.Drawing" />
-		<Reference Include="System.Net.Http" />
-		<Reference Include="System.Windows.Forms" />
-		<Reference Include="System.Xml" />
-	</ItemGroup>
-	<ItemGroup>
-		<Compile Include="Controllers\BatchController.cs" />
-		<Compile Include="Controllers\CourseController.cs" />
-		<Compile Include="Controllers\LecturerContoller.cs" />
-		<Compile Include="Controllers\LoginController.cs" />
-		<Compile Include="Controllers\MarkController.cs" />
-		<Compile Include="Controllers\AddController.cs" />
-		<Compile Include="Controllers\ExamController.cs" />
-		<Compile Include="Controllers\NICADDController.cs" />
-		<Compile Include="Controllers\RoomController.cs" />
-		<Compile Include="Controllers\StaffAddContoller.cs" />
-		<Compile Include="Controllers\StudentController.cs" />
-		<Compile Include="Controllers\TimetableController.cs" />
-		<Compile Include="Controllers\UsersContoller.cs" />
-		<Compile Include="Data\DataBasecon.cs" />
-		<Compile Include="Data\DatabaseInitializer.cs" />
-		<Compile Include="Form1.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="Form1.Designer.cs">
-			<DependentUpon>Form1.cs</DependentUpon>
-		</Compile>
-		<Compile Include="form\AddStaff.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="form\AddStaff.Designer.cs">
-			<DependentUpon>AddStaff.cs</DependentUpon>
-		</Compile>
-		<Compile Include="form\AddStudentDitals.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="form\AddStudentDitals.Designer.cs">
-			<DependentUpon>AddStudentDitals.cs</DependentUpon>
-		</Compile>
-		<Compile Include="form\AdminMenu.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="form\AdminMenu.Designer.cs">
-			<DependentUpon>AdminMenu.cs</DependentUpon>
-		</Compile>
-		<Compile Include="form\Batch.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="form\Batch.Designer.cs">
-			<DependentUpon>Batch.cs</DependentUpon>
-		</Compile>
-		<Compile Include="form\CourseAdd.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="form\CourseAdd.Designer.cs">
-			<DependentUpon>CourseAdd.cs</DependentUpon>
-		</Compile>
-		<Compile Include="form\ExamMenu.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="form\ExamMenu.Designer.cs">
-			<DependentUpon>ExamMenu.cs</DependentUpon>
-		</Compile>
-		<Compile Include="form\ExamResultADD.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="form\ExamResultADD.Designer.cs">
-			<DependentUpon>ExamResultADD.cs</DependentUpon>
-		</Compile>
-		<Compile Include="form\GetDataShow.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="form\GetDataShow.Designer.cs">
-			<DependentUpon>GetDataShow.cs</DependentUpon>
-		</Compile>
-		<Compile Include="form\LecturerClassTimeTable.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="form\LecturerClassTimeTable.Designer.cs">
-			<DependentUpon>LecturerClassTimeTable.cs</DependentUpon>
-		</Compile>
-		<Compile Include="form\LecturerDitals.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="form\LecturerDitals.Designer.cs">
-			<DependentUpon>LecturerDitals.cs</DependentUpon>
-		</Compile>
-		<Compile Include="form\LecturerDitalsShowLecturer.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="form\LecturerDitalsShowLecturer.Designer.cs">
-			<DependentUpon>LecturerDitalsShowLecturer.cs</DependentUpon>
-		</Compile>
-		<Compile Include="form\LecturerMenu.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="form\LecturerMenu.Designer.cs">
-			<DependentUpon>LecturerMenu.cs</DependentUpon>
-		</Compile>
-		<Compile Include="form\LoginMenu.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="form\LoginMenu.Designer.cs">
-			<DependentUpon>LoginMenu.cs</DependentUpon>
-		</Compile>
-		<Compile Include="form\ManagerForm.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="form\ManagerForm.Designer.cs">
-			<DependentUpon>ManagerForm.cs</DependentUpon>
-		</Compile>
-		<Compile Include="form\managersAddFormditals.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="form\managersAddFormditals.Designer.cs">
-			<DependentUpon>managersAddFormditals.cs</DependentUpon>
-		</Compile>
-		<Compile Include="form\MarkMenu.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="form\MarkMenu.Designer.cs">
-			<DependentUpon>MarkMenu.cs</DependentUpon>
-		</Compile>
-		<Compile Include="form\Massage.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="form\Massage.Designer.cs">
-			<DependentUpon>Massage.cs</DependentUpon>
-		</Compile>
-		<Compile Include="form\menuStaff.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="form\menuStaff.Designer.cs">
-			<DependentUpon>menuStaff.cs</DependentUpon>
-		</Compile>
-		<Compile Include="form\NICAddForm.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="form\NICAddForm.Designer.cs">
-			<DependentUpon>NICAddForm.cs</DependentUpon>
-		</Compile>
-		<Compile Include="form\RoomADD.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="form\RoomADD.Designer.cs">
-			<DependentUpon>RoomADD.cs</DependentUpon>
-		</Compile>
-		<Compile Include="form\StaffDetails.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="form\StaffDetails.Designer.cs">
-			<DependentUpon>StaffDetails.cs</DependentUpon>
-		</Compile>
-		<Compile Include="form\STUDENT.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="form\STUDENT.Designer.cs">
-			<DependentUpon>STUDENT.cs</DependentUpon>
-		</Compile>
-		<Compile Include="form\StudentAdd.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="form\StudentAdd.Designer.cs">
-			<DependentUpon>StudentAdd.cs</DependentUpon>
-		</Compile>
-		<Compile Include="form\StudentDitals.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="form\StudentDitals.Designer.cs">
-			<DependentUpon>StudentDitals.cs</DependentUpon>
-		</Compile>
-		<Compile Include="form\StudentExamDitalsShow.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="form\StudentExamDitalsShow.Designer.cs">
-			<DependentUpon>StudentExamDitalsShow.cs</DependentUpon>
-		</Compile>
-		<Compile Include="form\StudentExamResult.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="form\StudentExamResult.Designer.cs">
-			<DependentUpon>StudentExamResult.cs</DependentUpon>
-		</Compile>
-		<Compile Include="form\TimetableMenu.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="form\TimetableMenu.Designer.cs">
-			<DependentUpon>TimetableMenu.cs</DependentUpon>
-		</Compile>
-		<Compile Include="form\TimeTableViewStudent.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="form\TimeTableViewStudent.Designer.cs">
-			<DependentUpon>TimeTableViewStudent.cs</DependentUpon>
-		</Compile>
-		<Compile Include="form\UsersAdd.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="form\UsersAdd.Designer.cs">
-			<DependentUpon>UsersAdd.cs</DependentUpon>
-		</Compile>
-		<Compile Include="models\Admin.cs" />
-		<Compile Include="models\Attendance.cs" />
-		<Compile Include="models\Batches.cs" />
-		<Compile Include="models\Course.cs" />
-		<Compile Include="models\Exam.cs" />
-		<Compile Include="models\Lecturer.cs" />
-		<Compile Include="models\Marks.cs" />
-		<Compile Include="models\NICdata.cs" />
-		<Compile Include="models\Room.cs" />
-		<Compile Include="models\Staff.cs" />
-		<Compile Include="models\Student.cs" />
-		<Compile Include="models\Subject.cs" />
-		<Compile Include="models\Timetable.cs" />
-		<Compile Include="models\User.cs" />
-		<Compile Include="Program.cs" />
-		<Compile Include="Properties\AssemblyInfo.cs" />
-		<Compile Include="Utilities\LoginDitals.cs" />
-		<Compile Include="Utilities\LoginInfo.cs" />
-		<EmbeddedResource Include="Form1.resx">
-			<DependentUpon>Form1.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="form\AddStaff.resx">
-			<DependentUpon>AddStaff.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="form\AddStudentDitals.resx">
-			<DependentUpon>AddStudentDitals.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="form\AdminMenu.resx">
-			<DependentUpon>AdminMenu.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="form\Batch.resx">
-			<DependentUpon>Batch.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="form\CourseAdd.resx">
-			<DependentUpon>CourseAdd.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="form\ExamMenu.resx">
-			<DependentUpon>ExamMenu.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="form\ExamResultADD.resx">
-			<DependentUpon>ExamResultADD.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="form\GetDataShow.resx">
-			<DependentUpon>GetDataShow.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="form\LecturerClassTimeTable.resx">
-			<DependentUpon>LecturerClassTimeTable.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="form\LecturerDitals.resx">
-			<DependentUpon>LecturerDitals.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="form\LecturerDitalsShowLecturer.resx">
-			<DependentUpon>LecturerDitalsShowLecturer.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="form\LecturerMenu.resx">
-			<DependentUpon>LecturerMenu.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="form\LoginMenu.resx">
-			<DependentUpon>LoginMenu.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="form\ManagerForm.resx">
-			<DependentUpon>ManagerForm.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="form\managersAddFormditals.resx">
-			<DependentUpon>managersAddFormditals.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="form\MarkMenu.resx">
-			<DependentUpon>MarkMenu.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="form\Massage.resx">
-			<DependentUpon>Massage.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="form\menuStaff.resx">
-			<DependentUpon>menuStaff.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="form\NICAddForm.resx">
-			<DependentUpon>NICAddForm.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="form\RoomADD.resx">
-			<DependentUpon>RoomADD.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="form\StaffDetails.resx">
-			<DependentUpon>StaffDetails.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="form\STUDENT.resx">
-			<DependentUpon>STUDENT.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="form\StudentAdd.resx">
-			<DependentUpon>StudentAdd.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="form\StudentDitals.resx">
-			<DependentUpon>StudentDitals.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="form\StudentExamDitalsShow.resx">
-			<DependentUpon>StudentExamDitalsShow.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="form\StudentExamResult.resx">
-			<DependentUpon>StudentExamResult.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="form\TimetableMenu.resx">
-			<DependentUpon>TimetableMenu.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="form\TimeTableViewStudent.resx">
-			<DependentUpon>TimeTableViewStudent.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="form\UsersAdd.resx">
-			<DependentUpon>UsersAdd.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="Properties\Resources.resx">
-			<Generator>ResXFileCodeGenerator</Generator>
-			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
-			<SubType>Designer</SubType>
-		</EmbeddedResource>
-		<Compile Include="Properties\Resources.Designer.cs">
-			<AutoGen>True</AutoGen>
-			<DependentUpon>Resources.resx</DependentUpon>
-		</Compile>
-		<None Include="packages.config" />
-		<None Include="Properties\Settings.settings">
-			<Generator>SettingsSingleFileGenerator</Generator>
-			<LastGenOutput>Settings.Designer.cs</LastGenOutput>
-		</None>
-		<Compile Include="Properties\Settings.Designer.cs">
-			<AutoGen>True</AutoGen>
-			<DependentUpon>Settings.settings</DependentUpon>
-			<DesignTimeSharedInput>True</DesignTimeSharedInput>
-		</Compile>
-	</ItemGroup>
-	<ItemGroup>
-		<None Include="App.config" />
-	</ItemGroup>
-	<ItemGroup>
-		<Folder Include="Services\" />
-	</ItemGroup>
-	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-	<Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
-	<Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-		<PropertyGroup>
-			<ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-		</PropertyGroup>
-		<Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
-	</Target>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2A3574BC-210B-41B1-961F-0C9E0A3B8537}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>C__UnicomManagementSystem</RootNamespace>
+    <AssemblyName>C# UnicomManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.119.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\BatchController.cs" />
+    <Compile Include="Controllers\CourseController.cs" />
+    <Compile Include="Controllers\EmailSend\EmailController.cs" />
+    <Compile Include="Controllers\EmailSend\UserController.cs" />
+    <Compile Include="Controllers\LecturerContoller.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MarkController.cs" />
+    <Compile Include="Controllers\AddController.cs" />
+    <Compile Include="Controllers\ExamController.cs" />
+    <Compile Include="Controllers\NICADDController.cs" />
+    <Compile Include="Controllers\RoomController.cs" />
+    <Compile Include="Controllers\StaffAddContoller.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\TimetableController.cs" />
+    <Compile Include="Controllers\UsersContoller.cs" />
+    <Compile Include="Data\DataBasecon.cs" />
+    <Compile Include="Data\DatabaseInitializer.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\AddStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\AddStaff.Designer.cs">
+      <DependentUpon>AddStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\AddStudentDitals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\AddStudentDitals.Designer.cs">
+      <DependentUpon>AddStudentDitals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\AdminMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\AdminMenu.Designer.cs">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\Batch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\Batch.Designer.cs">
+      <DependentUpon>Batch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\CourseAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\CourseAdd.Designer.cs">
+      <DependentUpon>CourseAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\ExamMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\ExamMenu.Designer.cs">
+      <DependentUpon>ExamMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\ExamResultADD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\ExamResultADD.Designer.cs">
+      <DependentUpon>ExamResultADD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\GetDataShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\GetDataShow.Designer.cs">
+      <DependentUpon>GetDataShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\LecturerClassTimeTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\LecturerClassTimeTable.Designer.cs">
+      <DependentUpon>LecturerClassTimeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\LecturerDitals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\LecturerDitals.Designer.cs">
+      <DependentUpon>LecturerDitals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\LecturerDitalsShowLecturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\LecturerDitalsShowLecturer.Designer.cs">
+      <DependentUpon>LecturerDitalsShowLecturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\LecturerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\LecturerMenu.Designer.cs">
+      <DependentUpon>LecturerMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\LoginMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\LoginMenu.Designer.cs">
+      <DependentUpon>LoginMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\ManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\ManagerForm.Designer.cs">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\managersAddFormditals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\managersAddFormditals.Designer.cs">
+      <DependentUpon>managersAddFormditals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\MarkMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\MarkMenu.Designer.cs">
+      <DependentUpon>MarkMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\Massage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\Massage.Designer.cs">
+      <DependentUpon>Massage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\menuStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\menuStaff.Designer.cs">
+      <DependentUpon>menuStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\NICAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\NICAddForm.Designer.cs">
+      <DependentUpon>NICAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\RoomADD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\RoomADD.Designer.cs">
+      <DependentUpon>RoomADD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\StaffDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\StaffDetails.Designer.cs">
+      <DependentUpon>StaffDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\STUDENT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\STUDENT.Designer.cs">
+      <DependentUpon>STUDENT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\StudentAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\StudentAdd.Designer.cs">
+      <DependentUpon>StudentAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\StudentDitals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\StudentDitals.Designer.cs">
+      <DependentUpon>StudentDitals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\StudentExamDitalsShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\StudentExamDitalsShow.Designer.cs">
+      <DependentUpon>StudentExamDitalsShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\StudentExamResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\StudentExamResult.Designer.cs">
+      <DependentUpon>StudentExamResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\TimetableMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\TimetableMenu.Designer.cs">
+      <DependentUpon>TimetableMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\TimeTableViewStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\TimeTableViewStudent.Designer.cs">
+      <DependentUpon>TimeTableViewStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\UsersAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\UsersAdd.Designer.cs">
+      <DependentUpon>UsersAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="models\Admin.cs" />
+    <Compile Include="models\Attendance.cs" />
+    <Compile Include="models\Batches.cs" />
+    <Compile Include="models\Course.cs" />
+    <Compile Include="models\Exam.cs" />
+    <Compile Include="models\Lecturer.cs" />
+    <Compile Include="models\MailUser.cs" />
+    <Compile Include="models\Marks.cs" />
+    <Compile Include="models\NICdata.cs" />
+    <Compile Include="models\Room.cs" />
+    <Compile Include="models\Staff.cs" />
+    <Compile Include="models\Student.cs" />
+    <Compile Include="models\Subject.cs" />
+    <Compile Include="models\Timetable.cs" />
+    <Compile Include="models\User.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\LoginDitals.cs" />
+    <Compile Include="Utilities\LoginInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\AddStaff.resx">
+      <DependentUpon>AddStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\AddStudentDitals.resx">
+      <DependentUpon>AddStudentDitals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\AdminMenu.resx">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\Batch.resx">
+      <DependentUpon>Batch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\CourseAdd.resx">
+      <DependentUpon>CourseAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\ExamMenu.resx">
+      <DependentUpon>ExamMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\ExamResultADD.resx">
+      <DependentUpon>ExamResultADD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\GetDataShow.resx">
+      <DependentUpon>GetDataShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\LecturerClassTimeTable.resx">
+      <DependentUpon>LecturerClassTimeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\LecturerDitals.resx">
+      <DependentUpon>LecturerDitals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\LecturerDitalsShowLecturer.resx">
+      <DependentUpon>LecturerDitalsShowLecturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\LecturerMenu.resx">
+      <DependentUpon>LecturerMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\LoginMenu.resx">
+      <DependentUpon>LoginMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\ManagerForm.resx">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\managersAddFormditals.resx">
+      <DependentUpon>managersAddFormditals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\MarkMenu.resx">
+      <DependentUpon>MarkMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\Massage.resx">
+      <DependentUpon>Massage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\menuStaff.resx">
+      <DependentUpon>menuStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\NICAddForm.resx">
+      <DependentUpon>NICAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\RoomADD.resx">
+      <DependentUpon>RoomADD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\StaffDetails.resx">
+      <DependentUpon>StaffDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\STUDENT.resx">
+      <DependentUpon>STUDENT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\StudentAdd.resx">
+      <DependentUpon>StudentAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\StudentDitals.resx">
+      <DependentUpon>StudentDitals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\StudentExamDitalsShow.resx">
+      <DependentUpon>StudentExamDitalsShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\StudentExamResult.resx">
+      <DependentUpon>StudentExamResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\TimetableMenu.resx">
+      <DependentUpon>TimetableMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\TimeTableViewStudent.resx">
+      <DependentUpon>TimeTableViewStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\UsersAdd.resx">
+      <DependentUpon>UsersAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
 </Project>

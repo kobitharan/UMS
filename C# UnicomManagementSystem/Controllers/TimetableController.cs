@@ -6,6 +6,7 @@ using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace C__UnicomManagementSystem.Controllers
 {
@@ -131,8 +132,7 @@ namespace C__UnicomManagementSystem.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
-                // Optionally: MessageBox.Show("Something went wrong: " + ex.Message);
+                MessageBox.Show("Something went wrong: " + ex.Message);
             }
 
             return Ttable;
@@ -184,28 +184,57 @@ namespace C__UnicomManagementSystem.Controllers
             return Ttable;
         }
 
-        public bool IsTimeOverlapping(string date, string startTime, string endTime, int batchId)
+        public bool IsTimeOverlapping(string date, string startTime, string endTime, int batchId, int lecturerId, int roomId)
         {
             using (var conn = DataBasecon.GetConnection())
             {
                 var cmd = new SQLiteCommand(@"
             SELECT COUNT(*) FROM Time_Table
             WHERE Date = @Date
-              AND BatchId = @BatchId
               AND (
-                    (StartTime < @EndTime AND EndTime > @StartTime)
-                 )", conn);
+                  (BatchId = @BatchId) OR
+                  (LecturerId = @LecturerId) OR
+                  (RoomId = @RoomId)
+              )
+              AND (
+                  (StartTime < @EndTime AND EndTime > @StartTime)
+              )
+        ", conn);
 
                 cmd.Parameters.AddWithValue("@Date", date);
-                cmd.Parameters.AddWithValue("@BatchId", batchId);
                 cmd.Parameters.AddWithValue("@StartTime", startTime);
                 cmd.Parameters.AddWithValue("@EndTime", endTime);
+                cmd.Parameters.AddWithValue("@BatchId", batchId);
+                cmd.Parameters.AddWithValue("@LecturerId", lecturerId);
+                cmd.Parameters.AddWithValue("@RoomId", roomId);
 
                 int count = Convert.ToInt32(cmd.ExecuteScalar());
                 return count > 0;
             }
         }
 
-    }
+        public string DeleteTimeTable( int TID)
+        {
+            using (var conn = DataBasecon.GetConnection())
+            {
+                try
+                {
 
+                    var command = new SQLiteCommand("DELETE FROM Time_Table WHERE TimeTableId = @Id", conn);
+                    command.Parameters.AddWithValue("@Id", TID);
+                    int rows = command.ExecuteNonQuery();
+
+
+                    return "Deleted Successfully!";
+
+                }
+                catch (Exception ex)
+                {
+                    return "Error: " + ex.Message;
+                }
+            }
+        }
+    }
 }
+
+

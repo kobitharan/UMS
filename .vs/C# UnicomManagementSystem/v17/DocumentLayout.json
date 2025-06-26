@@ -3,60 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|c:\\users\\ut010036\\desktop\\26 new last than\\ums\\c# unicommanagementsystem\\controllers\\emailsend\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|solutionrelative:c# unicommanagementsystem\\controllers\\emailsend\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|c:\\users\\ut010036\\desktop\\26 new last than\\ums\\c# unicommanagementsystem\\form\\massage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|solutionrelative:c# unicommanagementsystem\\form\\massage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|c:\\users\\ut010036\\desktop\\26 new last than\\ums\\c# unicommanagementsystem\\form\\massage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|solutionrelative:c# unicommanagementsystem\\form\\massage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|c:\\users\\ut010036\\desktop\\26 new last than\\ums\\c# unicommanagementsystem\\controllers\\emailsend\\emailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|solutionrelative:c# unicommanagementsystem\\controllers\\emailsend\\emailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|c:\\users\\ut010036\\desktop\\26 new last than\\ums\\c# unicommanagementsystem\\models\\mailuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|solutionrelative:c# unicommanagementsystem\\models\\mailuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|c:\\users\\ut010036\\desktop\\26 new last than\\ums\\c# unicommanagementsystem\\form\\managerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|solutionrelative:c# unicommanagementsystem\\form\\managerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|c:\\users\\ut010036\\desktop\\26 new last than\\ums\\c# unicommanagementsystem\\form\\staffdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|solutionrelative:c# unicommanagementsystem\\form\\staffdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|c:\\users\\ut010036\\desktop\\26 new last than\\ums\\c# unicommanagementsystem\\form\\studentadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|solutionrelative:c# unicommanagementsystem\\form\\studentadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\c# unicommanagementsystem\\form\\usersadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|solutionrelative:c# unicommanagementsystem\\form\\usersadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|c:\\users\\ut010036\\desktop\\26 new last than\\ums\\c# unicommanagementsystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|solutionrelative:c# unicommanagementsystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|c:\\users\\ut010036\\desktop\\26 new last than\\ums\\c# unicommanagementsystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\c# unicommanagementsystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|solutionrelative:c# unicommanagementsystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|c:\\users\\ut010036\\desktop\\26 new last than\\ums\\c# unicommanagementsystem\\form\\timetablemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|solutionrelative:c# unicommanagementsystem\\form\\timetablemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|c:\\users\\ut010036\\desktop\\26 new last than\\ums\\c# unicommanagementsystem\\form\\timetablemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|solutionrelative:c# unicommanagementsystem\\form\\timetablemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\c# unicommanagementsystem\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|solutionrelative:c# unicommanagementsystem\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|c:\\users\\ut010036\\desktop\\26 new last than\\ums\\c# unicommanagementsystem\\form\\timetableviewstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|solutionrelative:c# unicommanagementsystem\\form\\timetableviewstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|c:\\users\\ut010036\\desktop\\26 new last than\\ums\\c# unicommanagementsystem\\controllers\\examcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|solutionrelative:c# unicommanagementsystem\\controllers\\examcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|c:\\users\\ut010036\\desktop\\26 new last than\\ums\\c# unicommanagementsystem\\utilities\\loginditals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|solutionrelative:c# unicommanagementsystem\\utilities\\loginditals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|c:\\users\\ut010036\\desktop\\26 new last than\\ums\\c# unicommanagementsystem\\utilities\\logininfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|solutionrelative:c# unicommanagementsystem\\utilities\\logininfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|c:\\users\\ut010036\\desktop\\26 new last than\\ums\\c# unicommanagementsystem\\form\\examresultadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|solutionrelative:c# unicommanagementsystem\\form\\examresultadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\c# unicommanagementsystem\\form\\examresultadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|solutionrelative:c# unicommanagementsystem\\form\\examresultadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\c# unicommanagementsystem\\form\\studentexamditalsshow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|solutionrelative:c# unicommanagementsystem\\form\\studentexamditalsshow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|c:\\users\\ut010036\\desktop\\26 new last than\\ums\\c# unicommanagementsystem\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|solutionrelative:c# unicommanagementsystem\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\c# unicommanagementsystem\\controllers\\userscontoller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|solutionrelative:c# unicommanagementsystem\\controllers\\userscontoller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\c# unicommanagementsystem\\form\\loginmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A3574BC-210B-41B1-961F-0C9E0A3B8537}|C# UnicomManagementSystem\\C# UnicomManagementSystem.csproj|solutionrelative:c# unicommanagementsystem\\form\\loginmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,17 +58,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 9,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\Form1.cs",
               "RelativeDocumentMoniker": "C# UnicomManagementSystem\\Form1.cs",
-              "ToolTip": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\Form1.cs*",
-              "RelativeToolTip": "C# UnicomManagementSystem\\Form1.cs*",
-              "ViewState": "AgIAADAAAAAAAAAAAAAowC8AAAAoAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\Form1.cs",
+              "RelativeToolTip": "C# UnicomManagementSystem\\Form1.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAIwLcAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-26T07:48:12.284Z",
               "IsPinned": true,
@@ -85,166 +77,166 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Massage.cs",
+              "DocumentMoniker": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\form\\Massage.cs",
+              "RelativeDocumentMoniker": "C# UnicomManagementSystem\\form\\Massage.cs",
+              "ToolTip": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\form\\Massage.cs",
+              "RelativeToolTip": "C# UnicomManagementSystem\\form\\Massage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T13:13:18.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MailUser.cs",
+              "DocumentMoniker": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\models\\MailUser.cs",
+              "RelativeDocumentMoniker": "C# UnicomManagementSystem\\models\\MailUser.cs",
+              "ToolTip": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\models\\MailUser.cs",
+              "RelativeToolTip": "C# UnicomManagementSystem\\models\\MailUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T12:58:23.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmailController.cs",
+              "DocumentMoniker": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\Controllers\\EmailSend\\EmailController.cs",
+              "RelativeDocumentMoniker": "C# UnicomManagementSystem\\Controllers\\EmailSend\\EmailController.cs",
+              "ToolTip": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\Controllers\\EmailSend\\EmailController.cs",
+              "RelativeToolTip": "C# UnicomManagementSystem\\Controllers\\EmailSend\\EmailController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T12:57:44.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\Controllers\\EmailSend\\UserController.cs",
+              "RelativeDocumentMoniker": "C# UnicomManagementSystem\\Controllers\\EmailSend\\UserController.cs",
+              "ToolTip": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\Controllers\\EmailSend\\UserController.cs",
+              "RelativeToolTip": "C# UnicomManagementSystem\\Controllers\\EmailSend\\UserController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T12:57:17.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Massage.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\form\\Massage.cs",
+              "RelativeDocumentMoniker": "C# UnicomManagementSystem\\form\\Massage.cs",
+              "ToolTip": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\form\\Massage.cs [Design]",
+              "RelativeToolTip": "C# UnicomManagementSystem\\form\\Massage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T12:54:30.536Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ManagerForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\form\\ManagerForm.cs",
+              "RelativeDocumentMoniker": "C# UnicomManagementSystem\\form\\ManagerForm.cs",
+              "ToolTip": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\form\\ManagerForm.cs [Design]",
+              "RelativeToolTip": "C# UnicomManagementSystem\\form\\ManagerForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T12:53:51.166Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StaffDetails.cs",
+              "DocumentMoniker": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\form\\StaffDetails.cs",
+              "RelativeDocumentMoniker": "C# UnicomManagementSystem\\form\\StaffDetails.cs",
+              "ToolTip": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\form\\StaffDetails.cs",
+              "RelativeToolTip": "C# UnicomManagementSystem\\form\\StaffDetails.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAEUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T12:36:03.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\Form1.cs",
               "RelativeDocumentMoniker": "C# UnicomManagementSystem\\Form1.cs",
-              "ToolTip": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\Form1.cs [Design]*",
-              "RelativeToolTip": "C# UnicomManagementSystem\\Form1.cs [Design]*",
+              "ToolTip": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\Form1.cs [Design]",
+              "RelativeToolTip": "C# UnicomManagementSystem\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-26T09:46:41.61Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TimetableMenu.cs",
-              "DocumentMoniker": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\form\\TimetableMenu.cs",
-              "RelativeDocumentMoniker": "C# UnicomManagementSystem\\form\\TimetableMenu.cs",
-              "ToolTip": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\form\\TimetableMenu.cs",
-              "RelativeToolTip": "C# UnicomManagementSystem\\form\\TimetableMenu.cs",
-              "ViewState": "AgIAAIgAAAAAAAAAAADwv4wAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T09:36:01.043Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TimetableMenu.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\form\\TimetableMenu.cs",
-              "RelativeDocumentMoniker": "C# UnicomManagementSystem\\form\\TimetableMenu.cs",
-              "ToolTip": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\form\\TimetableMenu.cs [Design]",
-              "RelativeToolTip": "C# UnicomManagementSystem\\form\\TimetableMenu.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T09:35:55.101Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TimeTableViewStudent.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\form\\TimeTableViewStudent.cs",
-              "RelativeDocumentMoniker": "C# UnicomManagementSystem\\form\\TimeTableViewStudent.cs",
-              "ToolTip": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\form\\TimeTableViewStudent.cs [Design]",
-              "RelativeToolTip": "C# UnicomManagementSystem\\form\\TimeTableViewStudent.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T09:35:51.137Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LoginDitals.cs",
-              "DocumentMoniker": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\Utilities\\LoginDitals.cs",
-              "RelativeDocumentMoniker": "C# UnicomManagementSystem\\Utilities\\LoginDitals.cs",
-              "ToolTip": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\Utilities\\LoginDitals.cs",
-              "RelativeToolTip": "C# UnicomManagementSystem\\Utilities\\LoginDitals.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T09:32:24.786Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ExamController.cs",
-              "DocumentMoniker": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\Controllers\\ExamController.cs",
-              "RelativeDocumentMoniker": "C# UnicomManagementSystem\\Controllers\\ExamController.cs",
-              "ToolTip": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\Controllers\\ExamController.cs",
-              "RelativeToolTip": "C# UnicomManagementSystem\\Controllers\\ExamController.cs",
-              "ViewState": "AgIAAIMAAAAAAAAAAADwv5YAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T09:23:54.041Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ExamResultADD.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\form\\ExamResultADD.cs",
-              "RelativeDocumentMoniker": "C# UnicomManagementSystem\\form\\ExamResultADD.cs",
-              "ToolTip": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\form\\ExamResultADD.cs [Design]",
-              "RelativeToolTip": "C# UnicomManagementSystem\\form\\ExamResultADD.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T09:17:03.747Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\Controllers\\LoginController.cs",
-              "RelativeDocumentMoniker": "C# UnicomManagementSystem\\Controllers\\LoginController.cs",
-              "ToolTip": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\Controllers\\LoginController.cs",
-              "RelativeToolTip": "C# UnicomManagementSystem\\Controllers\\LoginController.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAADwvzQAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T08:28:45.724Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "LoginInfo.cs",
-              "DocumentMoniker": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\Utilities\\LoginInfo.cs",
-              "RelativeDocumentMoniker": "C# UnicomManagementSystem\\Utilities\\LoginInfo.cs",
-              "ToolTip": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\Utilities\\LoginInfo.cs",
-              "RelativeToolTip": "C# UnicomManagementSystem\\Utilities\\LoginInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "UsersAdd.cs",
+              "DocumentMoniker": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\form\\UsersAdd.cs",
+              "RelativeDocumentMoniker": "C# UnicomManagementSystem\\form\\UsersAdd.cs",
+              "ToolTip": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\form\\UsersAdd.cs",
+              "RelativeToolTip": "C# UnicomManagementSystem\\form\\UsersAdd.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAgwCoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T09:32:23.334Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "App.config",
-              "DocumentMoniker": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\App.config",
-              "RelativeDocumentMoniker": "C# UnicomManagementSystem\\App.config",
-              "ToolTip": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\App.config",
-              "RelativeToolTip": "C# UnicomManagementSystem\\App.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-06-26T09:11:54.352Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ExamResultADD.cs",
-              "DocumentMoniker": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\form\\ExamResultADD.cs",
-              "RelativeDocumentMoniker": "C# UnicomManagementSystem\\form\\ExamResultADD.cs",
-              "ToolTip": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\form\\ExamResultADD.cs",
-              "RelativeToolTip": "C# UnicomManagementSystem\\form\\ExamResultADD.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAswGEAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T08:00:21.608Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "UsersContoller.cs",
-              "DocumentMoniker": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\Controllers\\UsersContoller.cs",
-              "RelativeDocumentMoniker": "C# UnicomManagementSystem\\Controllers\\UsersContoller.cs",
-              "ToolTip": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\Controllers\\UsersContoller.cs",
-              "RelativeToolTip": "C# UnicomManagementSystem\\Controllers\\UsersContoller.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAIA9wD4AAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T08:00:08.021Z",
+              "WhenOpened": "2025-06-26T10:22:31.711Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "StudentExamDitalsShow.cs",
-              "DocumentMoniker": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\form\\StudentExamDitalsShow.cs",
-              "RelativeDocumentMoniker": "C# UnicomManagementSystem\\form\\StudentExamDitalsShow.cs",
-              "ToolTip": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\form\\StudentExamDitalsShow.cs",
-              "RelativeToolTip": "C# UnicomManagementSystem\\form\\StudentExamDitalsShow.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAPAAAAAAAAAA==",
+              "Title": "LoginMenu.cs",
+              "DocumentMoniker": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\form\\LoginMenu.cs",
+              "RelativeDocumentMoniker": "C# UnicomManagementSystem\\form\\LoginMenu.cs",
+              "ToolTip": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\form\\LoginMenu.cs",
+              "RelativeToolTip": "C# UnicomManagementSystem\\form\\LoginMenu.cs",
+              "ViewState": "AgIAAL8AAAAAAAAAAAAowNMAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T08:01:03.944Z",
+              "WhenOpened": "2025-06-26T10:44:50.223Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "57400e06-237c-4455-9053-ed8ca57a2182",
+        "Display": 0,
+        "X": 157,
+        "Y": 141,
+        "Width": 1514,
+        "Height": 980,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "StudentAdd.cs",
+              "DocumentMoniker": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\form\\StudentAdd.cs",
+              "RelativeDocumentMoniker": "C# UnicomManagementSystem\\form\\StudentAdd.cs",
+              "ToolTip": "C:\\Users\\UT010036\\Desktop\\26 new last than\\UMS\\C# UnicomManagementSystem\\form\\StudentAdd.cs",
+              "RelativeToolTip": "C# UnicomManagementSystem\\form\\StudentAdd.cs",
+              "ViewState": "AgIAALYAAAAAAAAAAAAIwG4AAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T12:36:43.543Z",
               "EditorCaption": ""
             }
           ]

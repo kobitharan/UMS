@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,11 +25,11 @@ namespace C__UnicomManagementSystem.form
 
         public TimetableMenu()
         {
-            _LecturerContoller= new LecturerContoller();
+            _LecturerContoller = new LecturerContoller();
             _studentController = new StudentController();
             _CourseController = new CourseController();
             _NICADDController = new NICADDController();
-            _TimetableController= new TimetableController();
+            _TimetableController = new TimetableController();
             InitializeComponent();
 
             //Date.Format = DateTimePickerFormat.Custom;
@@ -47,7 +48,7 @@ namespace C__UnicomManagementSystem.form
             ETime.ShowUpDown = true;
             CMBLoadCourse();
             CMBLoadbatch();
-           // CMBLoadSubject();
+            // CMBLoadSubject();
             CMBLoadRoom();
             CMBLoadLecturer();
             TimeTableGV();
@@ -63,14 +64,14 @@ namespace C__UnicomManagementSystem.form
             //  BatchdataGridView();
             dataGridViewTimeTable.Columns["TimeTableId"].Visible = false;
             dataGridViewTimeTable.Columns["Ditals"].Visible = false;
-             dataGridViewTimeTable.Columns["SubjectName"].Visible = false;
+            dataGridViewTimeTable.Columns["SubjectName"].Visible = false;
             dataGridViewTimeTable.Columns["BatchId"].Visible = false;
-             dataGridViewTimeTable.Columns["CourseId"].Visible = false;
+            dataGridViewTimeTable.Columns["CourseId"].Visible = false;
             dataGridViewTimeTable.Columns["SubjectId"].Visible = false;
             dataGridViewTimeTable.Columns["RoomId"].Visible = false;
-             dataGridViewTimeTable.Columns["LecturerId"].Visible = false;
+            dataGridViewTimeTable.Columns["LecturerId"].Visible = false;
             dataGridViewTimeTable.Columns["RegistrationDate"].Visible = false;
-           
+
 
         }
         private void CMBLoadCourse()
@@ -79,8 +80,9 @@ namespace C__UnicomManagementSystem.form
             Course.DataSource = sections;
             Course.DisplayMember = "CourseName";
             Course.ValueMember = "CourseId";
+            CMBLoadSubject();
 
-        } 
+        }
         private void CMBLoadRoom()
         {
             var sections = _CourseController.GetAllRoom();
@@ -99,7 +101,7 @@ namespace C__UnicomManagementSystem.form
         }//Subject
         private void CMBLoadLecturer()
         {
-            var sections =_LecturerContoller.GetAllLecturer();
+            var sections = _LecturerContoller.GetAllLecturer();
             Lecturer.DataSource = sections;
             Lecturer.DisplayMember = "FullName";
             Lecturer.ValueMember = "LecturerId";
@@ -146,8 +148,8 @@ namespace C__UnicomManagementSystem.form
                 return;
             }
 
-            string startTime = $"{STime.Value.Hour:D2}:{STime.Value.Minute:D2}";
-            string endTime = $"{ETime.Value.Hour:D2}:{ETime.Value.Minute:D2}";
+            string startTime = $"{STime}";
+            string endTime = $"{ETime}";
             string date = Date.Text;
             int batchId = Convert.ToInt32(BatchCB.SelectedValue);
             int courseId = Convert.ToInt32(Course.SelectedValue);
@@ -155,14 +157,14 @@ namespace C__UnicomManagementSystem.form
             int roomId = Convert.ToInt32(Room.SelectedValue);
             int lecturerId = Convert.ToInt32(Lecturer.SelectedValue);
 
-           
 
-            // Check if overlaps with any existing class for same batch on same date
-            if (_TimetableController.IsTimeOverlapping(date, startTime, endTime, batchId))
+
+            if (_TimetableController.IsTimeOverlapping(date, startTime, endTime, batchId, lecturerId, roomId))
             {
-                MessageBox.Show("This batch already has a class during this time range!");
+                MessageBox.Show("Time conflict detected! Either Batch, Lecturer, or Room is already assigned during this time.");
                 return;
             }
+
 
             Timetable time = new Timetable
             {
@@ -191,7 +193,28 @@ namespace C__UnicomManagementSystem.form
 
         private void Delete_Click(object sender, EventArgs e)
         {
+            if (dataGridViewTimeTable.SelectedRows.Count > 0)
+            {
+                int TimeTableID = Convert.ToInt32(dataGridViewTimeTable.SelectedRows[0].Cells["TimeTableId"].Value);
+               String TimeTableMsg =_TimetableController.DeleteTimeTable(TimeTableID);
+                MessageBox.Show(TimeTableMsg);
+                TimeTableGV();
+            }
+        }
 
+        private void dataGridViewTimeTable_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridViewTimeTable.SelectedRows.Count > 0)
+            {
+                 Date.Text = dataGridViewTimeTable.SelectedRows[0].Cells["Date"].Value.ToString();
+                 STime.Text = dataGridViewTimeTable.SelectedRows[0].Cells["StartTime"].Value.ToString();
+                BatchCB.Text = dataGridViewTimeTable.SelectedRows[0].Cells["BatchName"].Value.ToString();
+                 ETime.Text = dataGridViewTimeTable.SelectedRows[0].Cells["EndTime"].Value.ToString();
+                Lecturer.Text = dataGridViewTimeTable.SelectedRows[0].Cells["LecturerName"].Value.ToString();
+                Course.Text = dataGridViewTimeTable.SelectedRows[0].Cells["CourseName"].Value.ToString();
+              //  Subject.Text = dataGridViewTimeTable.SelectedRows[0].Cells["Subject"].Value.ToString();
+                Room.Text = dataGridViewTimeTable.SelectedRows[0].Cells["RoomName"].Value.ToString();
+            }
         }
     }
 }

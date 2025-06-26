@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -37,6 +38,12 @@ namespace C__UnicomManagementSystem
             Login.Visible = true;
             exit.Visible = true;
             LoadAdmin();
+            // DateTime
+
+           // DateTimeditals.Text = DateTimeditals.Now.ToString("dd/MM/yyyy\n hh:mm tt");
+            DateTimeditals.ForeColor = Color.Blue;
+            DateTimeditals.Text = DateTime.Now.ToString("dd/MM/yyyy\n hh:mm:ss");
+
         }
         public void LoadForm(object formObj)
         {
@@ -59,13 +66,6 @@ namespace C__UnicomManagementSystem
             {
                 MessageBox.Show("HI Admin ... Enter  Your UserName AND  Password  ");
 
-                //Staff staff = new Staff 
-                //{
-                //    UserName = UserName.Text,
-                //    Password= Password.Text 
-                //};
-
-                // _AddController.AdminDitals(staff);
                 
             }
         }
@@ -78,6 +78,7 @@ namespace C__UnicomManagementSystem
         {
             
             LoadForm( new UsersAdd());
+          
             
 
             CreatAccount.Visible = false;
@@ -179,6 +180,17 @@ namespace C__UnicomManagementSystem
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            if (panel1.Controls.Count == 0)
+            {
+                // Panel is empty
+                LoadForm(new Form1());
+
+            }
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

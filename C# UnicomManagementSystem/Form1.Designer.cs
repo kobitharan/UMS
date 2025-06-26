@@ -36,6 +36,7 @@
             this.passwordlabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.exit = new System.Windows.Forms.Button();
+            this.DateTimeditals = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -110,6 +111,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel1.Controls.Add(this.DateTimeditals);
             this.panel1.Controls.Add(this.exit);
             this.panel1.Controls.Add(this.CreatAccount);
             this.panel1.Controls.Add(this.UserName);
@@ -134,6 +136,16 @@
             this.exit.Text = "EXIT";
             this.exit.UseVisualStyleBackColor = false;
             this.exit.Click += new System.EventHandler(this.exti_Click);
+            // 
+            // DateTimeditals
+            // 
+            this.DateTimeditals.AutoSize = true;
+            this.DateTimeditals.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateTimeditals.Location = new System.Drawing.Point(129, 53);
+            this.DateTimeditals.Name = "DateTimeditals";
+            this.DateTimeditals.Size = new System.Drawing.Size(0, 20);
+            this.DateTimeditals.TabIndex = 8;
+            this.DateTimeditals.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 
@@ -161,6 +173,7 @@
         private System.Windows.Forms.Label passwordlabel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button exit;
+        private System.Windows.Forms.Label DateTimeditals;
     }
 }
 

@@ -207,7 +207,9 @@ namespace C__UnicomManagementSystem.form
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Application.Exit();
+            Application.Restart(); // Completely restarts the application
+
+            this.Hide();
             // this.Close();
         }
 

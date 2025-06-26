@@ -88,10 +88,11 @@
             // dataGridViewTimeTable
             // 
             this.dataGridViewTimeTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTimeTable.Location = new System.Drawing.Point(174, 103);
+            this.dataGridViewTimeTable.Location = new System.Drawing.Point(174, 60);
             this.dataGridViewTimeTable.Name = "dataGridViewTimeTable";
-            this.dataGridViewTimeTable.Size = new System.Drawing.Size(666, 150);
+            this.dataGridViewTimeTable.Size = new System.Drawing.Size(666, 193);
             this.dataGridViewTimeTable.TabIndex = 4;
+            this.dataGridViewTimeTable.SelectionChanged += new System.EventHandler(this.dataGridViewTimeTable_SelectionChanged);
             // 
             // Save
             // 

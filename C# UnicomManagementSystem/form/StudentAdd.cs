@@ -108,7 +108,7 @@ namespace C__UnicomManagementSystem.form
             {
                 // NIC not found → add to temporary table
                 _studentController.TemrariAddStudent(student);  // Temp holding
-                MessageBox.Show("Student added temporarily (NIC not registered).");
+                MessageBox.Show("Student added temporarily (NIC not registered). ");
                 ClearForm();
                 return;
             }
@@ -137,10 +137,15 @@ namespace C__UnicomManagementSystem.form
                 return false;
             }
 
-            if (string.IsNullOrWhiteSpace(StudentNIC.Text))
+            //if (string.IsNullOrWhiteSpace(StudentNIC.Text))
+            //{
+            //    MessageBox.Show("Please enter Student NIC.");
+            //    StudentNIC.Focus();
+            //    return false;
+            //}
+            if (!System.Text.RegularExpressions.Regex.IsMatch(StudentNIC.Text, @"^(\d{9}[vVxX]|\d{12})$"))
             {
-                MessageBox.Show("Please enter Student NIC.");
-                StudentNIC.Focus();
+                MessageBox.Show("Invalid NIC format. Enter 9 digits with 'V' or 12-digit new format.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -158,13 +163,18 @@ namespace C__UnicomManagementSystem.form
                 return false;
             }
 
-            if (string.IsNullOrWhiteSpace(StudentUserName.Text))
+            //if (string.IsNullOrWhiteSpace(StudentUserName.Text))
+            //{
+            //    MessageBox.Show("Please enter Username.");
+            //    StudentUserName.Focus();
+            //    return false;
+            //}
+            if (!System.Text.RegularExpressions.Regex.IsMatch(StudentUserName.Text, @"^[A-Za-z][A-Za-z0-9_]{3,}$"))
             {
-                MessageBox.Show("Please enter Username.");
-                StudentUserName.Focus();
+                MessageBox.Show("Invalid username. Must start with a letter, contain only letters, numbers, or underscore, and be at least 4 characters long.",
+                                "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-
             if (string.IsNullOrWhiteSpace(StudentPassword.Text))
             {
                 MessageBox.Show("Please enter Password.");
