@@ -15,38 +15,41 @@ namespace C__UnicomManagementSystem.Controllers
 {
     internal class LoginController
     {
-        public static User  Getusers(string username,string password )
+        public static User GetUsers(string username, string password)
         {
-          
-            using(var conn = DataBasecon.GetConnection())
+            User user = null;
+
+            using (var conn = DataBasecon.GetConnection())
             {
-                var cmd = new SQLiteCommand(@"
-                SELECT *
-                FROM Users_Table
-                WHERE UserName =@UserName AND Password=@Password
-                ",conn);
-                cmd.Parameters.AddWithValue("@UserName",username);
-                cmd.Parameters.AddWithValue("@Password", password);
-                var reader = cmd.ExecuteReader();
-               int Count = 0;
-                if (reader.Read())
+               
+                using (var cmd = new SQLiteCommand(@"
+            SELECT UserId, UserName, Password, Status, ALLID 
+            FROM Users_Table 
+            WHERE UserName = @UserName AND Password = @Password", conn))
                 {
-                    return new User
+                    cmd.Parameters.AddWithValue("@UserName", username);
+                    cmd.Parameters.AddWithValue("@Password", password);
+
+                    using (var reader = cmd.ExecuteReader())
                     {
-                        UserId = reader.GetInt32(0),
-                        UserName = reader.GetString(1),
-                        Password = reader.GetString(2),
-                        Status = reader.GetString(3),
-                        ALLID = reader.GetString(4),
-                    };
-                }
-                else
-                {
-                    return null; // no user found
+                        if (reader.Read())
+                        {
+                            user = new User
+                            {
+                                UserId = reader.GetInt32(0),
+                                UserName = reader.GetString(1),
+                                Password = reader.GetString(2),
+                                Status = reader.GetString(3),
+                                ALLID = reader.GetString(4)
+                            };
+                        }
+                    }
                 }
             }
-          
+
+            return user;
         }
+
         public static int GetUserCount()
         {
             using (var conn = DataBasecon.GetConnection())

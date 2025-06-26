@@ -15,6 +15,7 @@ using System.Windows.Forms;
 using static System.Collections.Specialized.BitVector32;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace C__UnicomManagementSystem
 {
@@ -56,14 +57,15 @@ namespace C__UnicomManagementSystem
             var Count = LoginController.GetUserCount();
             if (Count == 0)
             {
-                MessageBox.Show("HI Admin ... Your UserName : @Admin Password :Admin ");
-                Staff staff = new Staff 
-                {
-                    UserName ="@Admin",
-                    Password= "Admin"
-                };
+                MessageBox.Show("HI Admin ... Enter  Your UserName AND  Password  ");
 
-                 _AddController.AdminDitals(staff);
+                //Staff staff = new Staff 
+                //{
+                //    UserName = UserName.Text,
+                //    Password= Password.Text 
+                //};
+
+                // _AddController.AdminDitals(staff);
                 
             }
         }
@@ -74,10 +76,9 @@ namespace C__UnicomManagementSystem
 
         private void CreatAccount_Click(object sender, EventArgs e)
         {
-            //panel1
+            
             LoadForm( new UsersAdd());
-            //UsersAdd frm = new UsersAdd();
-            //frm.Show();
+            
 
             CreatAccount.Visible = false;
             namelabel.Visible = false;
@@ -91,12 +92,28 @@ namespace C__UnicomManagementSystem
 
         private void Login_Click(object sender, EventArgs e)
         {
-            var username1 = UserName.Text;
-            var password1 = Password.Text;
+
+           
             
-            var users = LoginController.Getusers(username1, password1);
+                var Count = LoginController.GetUserCount();
+                if (Count == 0 && UserName.Text=="" && Password.Text =="")
+                {
+                    Staff staff = new Staff
+                    {
+                        UserName = UserName.Text,
+                        Password = Password.Text
+                    };
 
+                    _AddController.AdminDitals(staff);
 
+                }
+            
+            var username = UserName.Text;
+            var password = Password.Text;
+
+            var users = LoginController.GetUsers(username, password);
+
+           
             // If no user is found
             if (users == null )
             {
@@ -113,8 +130,10 @@ namespace C__UnicomManagementSystem
                 LoginDitals.Set("UserId", users.UserId);
                 LoginDitals.Set("Password", users.Password);
 
-             
-                
+                //MessageBox.Show("Your 6565");
+
+               LoadForm(new LoginMenu());
+
                 CreatAccount.Visible = false;
                 namelabel.Visible = false;
                 UserName.Visible = false;
@@ -122,8 +141,8 @@ namespace C__UnicomManagementSystem
                 Password.Visible = false;
                 // Loginlabel.Visible = false;
                 Login.Visible = false;
-                exit.Visible = false;                   
-                LoadForm(new LoginMenu());           
+                exit.Visible = false;
+
             }
             else if (users.Status == "Inactive")
             {

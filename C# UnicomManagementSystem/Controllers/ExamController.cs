@@ -148,6 +148,45 @@ namespace C__UnicomManagementSystem.Controllers
 
             return examList;
         }
+        public List<Exam> GetAllExams()
+        {
+            var examList = new List<Exam>();
+
+            using (var conn = DataBasecon.GetConnection())
+            {
+                var cmd = new SQLiteCommand(@"
+            SELECT 
+                ExamId,
+                Ditals,
+                Date,
+                StartTime,
+                EndTime,
+                SubjectId,
+                BatchId,
+                CourseId,
+                RoomId
+            FROM Exam_Table", conn);
+
+                var reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    examList.Add(new Exam
+                    {
+                        ExamId = Convert.ToInt32(reader["ExamId"]),
+                        Ditals = reader["Ditals"].ToString(),
+                        Date = reader["Date"].ToString(),
+                        StartTime = reader["StartTime"].ToString(),
+                        EndTime = reader["EndTime"].ToString(),
+                        SubjectId = Convert.ToInt32(reader["SubjectId"]),
+                        BatchId = Convert.ToInt32(reader["BatchId"]),
+                        CourseId = Convert.ToInt32(reader["CourseId"]),
+                        RoomId = Convert.ToInt32(reader["RoomId"])
+                    });
+                }
+            }
+
+            return examList;
+        }
 
     }
 }

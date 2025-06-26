@@ -38,7 +38,8 @@ namespace C__UnicomManagementSystem.form
             this.Mainpanel.Tag = form;
             form.Show();
         }
-
+       
+        
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -71,7 +72,7 @@ namespace C__UnicomManagementSystem.form
 
         private void Back_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+           // Application.Exit();
             //Form1 loginform = new Form1();
             // loginform.Show();
 

@@ -17,14 +17,14 @@ namespace C__UnicomManagementSystem.form
         public ExamResultADD()
         {
             InitializeComponent();
-            LoadExamResults();
+           // LoadExamResults();
             ExamResultForm_Load();
         }
         private void LoadExamResults()
         {
-            var results = _examController.GetAllExamResults();
-            ResultGrid.DataSource = results;
-            ResultGrid.ClearSelection();
+           // var results = _examController.GetAllExamResults();
+           // ResultGrid.DataSource = results;
+           // ResultGrid.ClearSelection();
 
             // Columns to hide (avoid duplicates)
             string[] hiddenColumns = {
@@ -67,13 +67,13 @@ namespace C__UnicomManagementSystem.form
             CourseCB.ValueMember = "CourseId";
             // Load subjects for selected course
 
-           
-            // Load Exams
+
+          //  Load Exams
             var examList = _examController.GetAllExams();
             ExamCB.DataSource = examList;
             ExamCB.DisplayMember = "Ditals";
             ExamCB.ValueMember = "ExamId";
-           
+
         }
        
 
@@ -127,9 +127,9 @@ namespace C__UnicomManagementSystem.form
                  BatchId  = Batch,
             };
 
-            string message = _examController.AddExamResult(result);
-            MessageBox.Show(message);
-            LoadExamResults();
+           // string message = _examController.AddExamResult(result);
+           // MessageBox.Show(message);
+            //LoadExamResults();
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)

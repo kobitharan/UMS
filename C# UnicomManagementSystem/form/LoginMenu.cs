@@ -44,8 +44,7 @@ namespace C__UnicomManagementSystem.form
                 CourseSubjectADD.Visible = false;
                 ClassroomAdd.Visible = false;
                 Staff.Visible = false;
-              //  NICADD.Visible = false;
-             //  ADDSTAFF.Visible = false;
+             
                 Manager.Visible = false;
                 managerAdd.Visible = false;
                 Lecturer.Visible = false;
@@ -55,15 +54,13 @@ namespace C__UnicomManagementSystem.form
 
             if (Role == "Staff")
             {
-              //  EXamResulADD.Visible = true;
                 Exam.Visible = true;
                 TimeTable.Visible = true;
                 BatchADD.Visible = true;
                 CourseSubjectADD.Visible = true;
                 ClassroomAdd.Visible = true;
                 Staff.Visible = true;
-              //  NICADD.Visible = false;
-              //  ADDSTAFF.Visible = false;
+             
                 Manager.Visible = false;
                 managerAdd.Visible = false;
                 Lecturer.Visible = false;
@@ -73,7 +70,7 @@ namespace C__UnicomManagementSystem.form
 
             if (Role == "Lecturer")
             {
-              //  EXamResulADD.Visible = true;
+              
                 Lecturer.Visible = true;
                 Exam.Visible = true;
                 TimeTable.Visible = true;
@@ -81,23 +78,21 @@ namespace C__UnicomManagementSystem.form
                 CourseSubjectADD.Visible = false;
                 ClassroomAdd.Visible = false;
                 Staff.Visible = false;
-              //  NICADD.Visible = false;
-             //   ADDSTAFF.Visible = false;
+              
                 Manager.Visible = false;
                 managerAdd.Visible = false;
                
                 LoadForm(new LecturerMenu());//LecturerMenu
             } if (Role == "Manager")
             {
-             //   EXamResulADD.Visible = true;
+             
                 Exam.Visible = true;
                 TimeTable.Visible = true;
                 BatchADD.Visible = true;
                 CourseSubjectADD.Visible = true;
                 ClassroomAdd.Visible = true;
                 Staff.Visible = true;
-              //  NICADD.Visible = true;
-              //  ADDSTAFF.Visible = true;
+              
                 Manager.Visible = true;
                 Lecturer.Visible = false ;
                 managerAdd.Visible = false;
@@ -107,15 +102,14 @@ namespace C__UnicomManagementSystem.form
 
             if (Role == "Admin")
             {
-               // EXamResulADD.Visible = true;
+              
                 Exam.Visible = true;
                 TimeTable.Visible = true;
                 BatchADD.Visible = true;
                 CourseSubjectADD.Visible = true;
                 ClassroomAdd.Visible = true;
                 Staff.Visible = true;
-               // NICADD.Visible = true;
-              //  ADDSTAFF.Visible = true;
+              
                 Manager.Visible = true;
                 managerAdd.Visible = true;
                 Lecturer.Visible = false;

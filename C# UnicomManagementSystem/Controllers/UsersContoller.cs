@@ -45,7 +45,7 @@ namespace C__UnicomManagementSystem.Controllers
                 {
                     if (reader.Read())
                     {
-                        if(string uaername== reader.GetString(reader.GetOrdinal("UserName")))
+                        
                         return new User
                         {
                             UserId = reader.GetInt32(reader.GetOrdinal("UserId")),
@@ -60,30 +60,7 @@ namespace C__UnicomManagementSystem.Controllers
 
             return null; // No user found
         }
-    public List<User> GetAllUsers00000()
-        {
-            var users = new List<User>();
-            using (var conn = DataBasecon.GetConnection())
-            {
-                const string query = "SELECT UserId, UserName, Password, Status, ALLID FROM Users_Table";
-                var cmd = new SQLiteCommand(query, conn);
-                using (var reader = cmd.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        users.Add(new User
-                        {
-                            UserId = reader.GetInt32(reader.GetOrdinal("UserId")),
-                            UserName = reader.GetString(reader.GetOrdinal("UserName")),
-                            Password = reader.GetString(reader.GetOrdinal("Password")),
-                            Status = reader.GetString(reader.GetOrdinal("Status")),
-                            ALLID = reader.GetString(reader.GetOrdinal("ALLID"))
-                        });
-                    }
-                }
-            }
-            return users;
-        }
+   
 
     }
 }

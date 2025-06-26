@@ -60,11 +60,11 @@ namespace C__UnicomManagementSystem.form
                 return;
             }
           
-            if (!System.Text.RegularExpressions.Regex.IsMatch(nic, @"^(\d{9}[vVxX]|\d{12})$"))
-            {
-                MessageBox.Show("Invalid NIC format. Enter 9 digits with 'V' or 12-digit new format.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            //if (!System.Text.RegularExpressions.Regex.IsMatch(nic, @"^(\d{9}[vVxX]|\d{12})$"))
+            //{
+            //    MessageBox.Show("Invalid NIC format. Enter 9 digits with 'V' or 12-digit new format.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    return;
+            //}
            
             if (string.IsNullOrWhiteSpace(Address.Text))
             {
@@ -79,12 +79,12 @@ namespace C__UnicomManagementSystem.form
             }
 
           
-            if (!System.Text.RegularExpressions.Regex.IsMatch(username.Text, @"^[A-Za-z][A-Za-z0-9_]{3,}$"))
-            {
-                MessageBox.Show("Invalid username. Must start with a letter, contain only letters, numbers, or underscore, and be at least 4 characters long.",
-                                "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            //if (!System.Text.RegularExpressions.Regex.IsMatch(username.Text, @"^[A-Za-z][A-Za-z0-9_]{3,}$"))
+            //{
+            //    MessageBox.Show("Invalid username. Must start with a letter, contain only letters, numbers, or underscore, and be at least 4 characters long.",
+            //                    "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    return;
+            //}
            
             if (password.Text.Length < 6)
             {

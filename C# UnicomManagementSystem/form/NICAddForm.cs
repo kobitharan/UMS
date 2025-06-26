@@ -19,14 +19,14 @@ namespace C__UnicomManagementSystem.form
         public NICAddForm()
         {
             _NICADDController = new NICADDController();
+
             InitializeComponent();
             List<string> items = new List<string>() { "Student", "Staff", "Lecturer" };
             RoleComboBox.DataSource = items;
 
             NICdGV();
 
-       // ----------------  //  LoginInfo.Username = "";
-    //  --------------    //  MessageBox.Show(LoginInfo.Username);
+     
         }
 
         private void NICdGV()
@@ -52,23 +52,18 @@ namespace C__UnicomManagementSystem.form
                     return;
                 }
 
-                // Optional: Validate only numbers or allow last char to be 'V'
-                if (!System.Text.RegularExpressions.Regex.IsMatch(nic, @"^\d{9}[Vv]?$|^\d{12}$"))
-                {
-                    MessageBox.Show("NIC format is invalid. Use 12 digits or 9 digits + 'V'.");
-                    return;
-                }
+               
 
-                NICdata NICdata = new NICdata()
+                NICdata NICdat = new NICdata()
                 {
                     NIC = nic,
                     Role = RoleComboBox.Text,
                 };
 
-                string getMessage = _NICADDController.AddNIC(NICdata);
+                string getMessage = _NICADDController.AddNIC(NICdat);
                 MessageBox.Show(getMessage);
 
-                NICdGV(); // Reload DataGrid
+                NICdGV();
             }
             catch (Exception ex)
             {
@@ -107,13 +102,7 @@ namespace C__UnicomManagementSystem.form
                 NICtextbox.Text = NICdataGridView.SelectedRows[0].Cells["NIC"].Value.ToString();
                 RoleComboBox.Text = NICdataGridView.SelectedRows[0].Cells["Role"].Value.ToString();
                 
-                NICtextbox.Text = NICdataGridView.SelectedRows[0].Cells["NIC"].Value.ToString();
-                RoleComboBox.Text = NICdataGridView.SelectedRows[0].Cells["Role"].Value.ToString();
-                
-                NICtextbox.Text = NICdataGridView.SelectedRows[0].Cells["NIC"].Value.ToString();
-                NICtextbox.Text = NICdataGridView.SelectedRows[0].Cells["NIC"].Value.ToString();
-                RoleComboBox.Text = NICdataGridView.SelectedRows[0].Cells["Specialization"].Value.ToString();
-                
+              
             }
         }
 

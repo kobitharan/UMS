@@ -55,18 +55,35 @@ namespace C__UnicomManagementSystem.Controllers
 
             return NIC;
         }
-        public string AddNIC(NICdata NICdata)
+        public string AddNIC(NICdata NICda)
         {
             using (var conn = DataBasecon.GetConnection())
             {
-                string addStudentQuery = "INSERT INTO NIC_Table (NIC,Role) VALUES (@NIC, @Role)";
-                SQLiteCommand insertStudentCommand = new SQLiteCommand(addStudentQuery, conn);
-
-                insertStudentCommand.Parameters.AddWithValue("@NIC", NICdata.NIC);
-                insertStudentCommand.Parameters.AddWithValue("@Role", NICdata.Role);
-
-                insertStudentCommand.ExecuteNonQuery();
+                // Make sure to open the connection
+                using (var command = new SQLiteCommand("INSERT INTO NIC_Table (NIC, Role) VALUES (@NIC, @Role)", conn))
+                {
+                    command.Parameters.AddWithValue("@NIC", NICda.NIC);
+                    command.Parameters.AddWithValue("@Role", NICda.Role);
+                    command.ExecuteNonQuery();
+                }
             }
+
+            //using (var conn = DataBasecon.GetConnection())
+            //{
+            //    var command = new SQLiteCommand("INSERT INTO NIC_Table (NIC,Role) VALUES (@NIC, @Role)" conn);
+
+            //    command.Parameters.AddWithValue("@NIC", NICdata.NIC);
+            //    command.Parameters.AddWithValue("@Role", NICdata.Role);
+            //    command.ExecuteNonQuery();
+
+                //string addStudentQuery = "INSERT INTO NIC_Table (NIC,Role) VALUES (@NIC, @Role)";
+                //SQLiteCommand insertStudentCommand = new SQLiteCommand(addStudentQuery, conn);
+
+                //insertStudentCommand.Parameters.AddWithValue("@NIC", NICdata.NIC);
+                //insertStudentCommand.Parameters.AddWithValue("@Role", NICdata.Role);
+
+                //insertStudentCommand.ExecuteNonQuery();
+            
 
             return "NIC Added Successfully!";
         }

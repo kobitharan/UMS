@@ -1,9 +1,10 @@
-﻿using System;
+﻿using C__UnicomManagementSystem.Data;
+using C__UnicomManagementSystem.form;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using C__UnicomManagementSystem.Data;
 
 namespace C__UnicomManagementSystem
 {
@@ -23,7 +24,8 @@ namespace C__UnicomManagementSystem
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+        Application.Run(new Form1());
+      // Application.Run(new LoginMenu());
         }
     }
 }
