@@ -60,7 +60,44 @@ namespace C__UnicomManagementSystem.Controllers
 
             return null; // No user found
         }
-   
 
+        public List<User> GetAllEmailname()
+        {
+            var User = new List<User>();
+
+            try
+            {
+                using (var conn = DataBasecon.GetConnection())
+                {
+
+
+                    const string query = "SELECT *  FROM Users_Table";
+
+                    using (var cmd = new SQLiteCommand(query, conn))
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            var user = new User
+                            {
+                                UserId = reader.GetInt32(reader.GetOrdinal("UserId")),
+                                UserName = reader.GetString(reader.GetOrdinal("UserName")),
+                              
+                            };
+
+                            User.Add(user);
+                        }
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                // Optional: Log the error, or rethrow with custom message
+                Console.WriteLine("Error loading courses: " + ex.Message);
+            }
+
+            return User;
+        }
     }
 }

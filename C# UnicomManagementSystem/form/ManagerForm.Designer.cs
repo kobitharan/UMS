@@ -33,6 +33,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.NICADDD = new System.Windows.Forms.Button();
             this.LecturerAddd = new System.Windows.Forms.Button();
+            this.MailSend = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Managerpanel
@@ -82,11 +83,22 @@
             this.LecturerAddd.UseVisualStyleBackColor = true;
             this.LecturerAddd.Click += new System.EventHandler(this.LecturerAddd_Click);
             // 
+            // MailSend
+            // 
+            this.MailSend.Location = new System.Drawing.Point(503, 12);
+            this.MailSend.Name = "MailSend";
+            this.MailSend.Size = new System.Drawing.Size(99, 39);
+            this.MailSend.TabIndex = 6;
+            this.MailSend.Text = "Mail Send";
+            this.MailSend.UseVisualStyleBackColor = true;
+            this.MailSend.Click += new System.EventHandler(this.MailSend_Click);
+            // 
             // ManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1036, 675);
+            this.Controls.Add(this.MailSend);
             this.Controls.Add(this.LecturerAddd);
             this.Controls.Add(this.NICADDD);
             this.Controls.Add(this.button2);
@@ -106,5 +118,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button NICADDD;
         private System.Windows.Forms.Button LecturerAddd;
+        private System.Windows.Forms.Button MailSend;
     }
 }

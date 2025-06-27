@@ -41,9 +41,12 @@
             this.Address = new System.Windows.Forms.TextBox();
             this.contactno = new System.Windows.Forms.TextBox();
             this.username = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Registration = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.OTPMAIL = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.SENTOTP = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // NAME
@@ -95,9 +98,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(403, 51);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 13);
+            this.label6.Size = new System.Drawing.Size(77, 13);
             this.label6.TabIndex = 5;
-            this.label6.Text = "UserName";
+            this.label6.Text = "Enter your Mail";
             // 
             // Fullname
             // 
@@ -148,42 +151,72 @@
             this.username.Size = new System.Drawing.Size(193, 20);
             this.username.TabIndex = 12;
             // 
-            // button1
+            // Registration
             // 
-            this.button1.Location = new System.Drawing.Point(515, 307);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(193, 44);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "SUBMIT";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Registration.Location = new System.Drawing.Point(515, 307);
+            this.Registration.Name = "Registration";
+            this.Registration.Size = new System.Drawing.Size(193, 44);
+            this.Registration.TabIndex = 15;
+            this.Registration.Text = "Registration";
+            this.Registration.UseVisualStyleBackColor = true;
+            this.Registration.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(403, 125);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.Size = new System.Drawing.Size(81, 13);
             this.label1.TabIndex = 16;
-            this.label1.Text = "Password";
+            this.label1.Text = "Creat Password";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(420, 187);
+            this.label7.Location = new System.Drawing.Point(403, 184);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(72, 13);
             this.label7.TabIndex = 17;
             this.label7.Text = "Specialization";
+            // 
+            // OTPMAIL
+            // 
+            this.OTPMAIL.Location = new System.Drawing.Point(515, 246);
+            this.OTPMAIL.Name = "OTPMAIL";
+            this.OTPMAIL.Size = new System.Drawing.Size(86, 20);
+            this.OTPMAIL.TabIndex = 18;
+            this.OTPMAIL.TextChanged += new System.EventHandler(this.OTPMAIL_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(383, 249);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(101, 13);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Enter YourMail OTP";
+            // 
+            // SENTOTP
+            // 
+            this.SENTOTP.Location = new System.Drawing.Point(624, 84);
+            this.SENTOTP.Name = "SENTOTP";
+            this.SENTOTP.Size = new System.Drawing.Size(105, 28);
+            this.SENTOTP.TabIndex = 20;
+            this.SENTOTP.Text = "SENT OTP";
+            this.SENTOTP.UseVisualStyleBackColor = true;
+            this.SENTOTP.Click += new System.EventHandler(this.button2_Click);
             // 
             // StaffDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(798, 377);
+            this.Controls.Add(this.SENTOTP);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.OTPMAIL);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Registration);
             this.Controls.Add(this.contactno);
             this.Controls.Add(this.username);
             this.Controls.Add(this.Address);
@@ -221,8 +254,11 @@
         private System.Windows.Forms.TextBox Address;
         private System.Windows.Forms.TextBox contactno;
         private System.Windows.Forms.TextBox username;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Registration;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox OTPMAIL;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button SENTOTP;
     }
 }

@@ -339,3 +339,26 @@ C:\Users\UT010036\Desktop\26 new last than\UMS\C# UnicomManagementSystem\bin\Deb
 C:\Users\UT010036\Desktop\26 new last than\UMS\C# UnicomManagementSystem\bin\Debug\System.Data.SQLite.dll
 C:\Users\UT010036\Desktop\26 new last than\UMS\C# UnicomManagementSystem\bin\Debug\System.Data.SQLite.xml
 C:\Users\UT010036\Desktop\26 new last than\UMS\C# UnicomManagementSystem\obj\Debug\C# Unico.0F2B4A6F.Up2Date
+C:\Users\UT010036\Desktop\26 new last than\UMS\C# UnicomManagementSystem\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\UT010036\Desktop\26 new last than\UMS\C# UnicomManagementSystem\bin\Debug\MailKit.dll
+C:\Users\UT010036\Desktop\26 new last than\UMS\C# UnicomManagementSystem\bin\Debug\MimeKit.dll
+C:\Users\UT010036\Desktop\26 new last than\UMS\C# UnicomManagementSystem\bin\Debug\System.Buffers.dll
+C:\Users\UT010036\Desktop\26 new last than\UMS\C# UnicomManagementSystem\bin\Debug\System.Formats.Asn1.dll
+C:\Users\UT010036\Desktop\26 new last than\UMS\C# UnicomManagementSystem\bin\Debug\System.Memory.dll
+C:\Users\UT010036\Desktop\26 new last than\UMS\C# UnicomManagementSystem\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\UT010036\Desktop\26 new last than\UMS\C# UnicomManagementSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\UT010036\Desktop\26 new last than\UMS\C# UnicomManagementSystem\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\UT010036\Desktop\26 new last than\UMS\C# UnicomManagementSystem\bin\Debug\System.ValueTuple.dll
+C:\Users\UT010036\Desktop\26 new last than\UMS\C# UnicomManagementSystem\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\UT010036\Desktop\26 new last than\UMS\C# UnicomManagementSystem\bin\Debug\MailKit.pdb
+C:\Users\UT010036\Desktop\26 new last than\UMS\C# UnicomManagementSystem\bin\Debug\MailKit.xml
+C:\Users\UT010036\Desktop\26 new last than\UMS\C# UnicomManagementSystem\bin\Debug\MailKit.dll.config
+C:\Users\UT010036\Desktop\26 new last than\UMS\C# UnicomManagementSystem\bin\Debug\MimeKit.pdb
+C:\Users\UT010036\Desktop\26 new last than\UMS\C# UnicomManagementSystem\bin\Debug\MimeKit.xml
+C:\Users\UT010036\Desktop\26 new last than\UMS\C# UnicomManagementSystem\bin\Debug\System.Buffers.xml
+C:\Users\UT010036\Desktop\26 new last than\UMS\C# UnicomManagementSystem\bin\Debug\System.Formats.Asn1.xml
+C:\Users\UT010036\Desktop\26 new last than\UMS\C# UnicomManagementSystem\bin\Debug\System.Memory.xml
+C:\Users\UT010036\Desktop\26 new last than\UMS\C# UnicomManagementSystem\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\UT010036\Desktop\26 new last than\UMS\C# UnicomManagementSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\UT010036\Desktop\26 new last than\UMS\C# UnicomManagementSystem\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\UT010036\Desktop\26 new last than\UMS\C# UnicomManagementSystem\bin\Debug\System.ValueTuple.xml

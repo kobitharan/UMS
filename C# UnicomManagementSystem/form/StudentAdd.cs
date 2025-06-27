@@ -1,5 +1,7 @@
 ﻿using C__UnicomManagementSystem.Controllers;
+using C__UnicomManagementSystem.Controllers.EmailSend;
 using C__UnicomManagementSystem.models;
+using C__UnicomManagementSystem.Utilities;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -17,11 +19,12 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 namespace C__UnicomManagementSystem.form
 {
     public partial class StudentAdd : Form
-        
+
     {
+        private readonly EmailController _emailController;
         private readonly StudentController _studentController;
         private readonly CourseController _CourseController;
-        private readonly NICADDController _NICADDController;
+        private readonly NICADDController _NICADDController; 
         private readonly LoginController _LoginController;
         public StudentAdd(string role)
         {
@@ -30,6 +33,8 @@ namespace C__UnicomManagementSystem.form
             _CourseController = new CourseController();
             _NICADDController = new NICADDController();
             _LoginController = new LoginController();
+
+            _emailController = new EmailController();
 
             CMBLoadCourse();
             CMBLoadbatch();
@@ -44,6 +49,7 @@ namespace C__UnicomManagementSystem.form
             StudentContactNO.Clear();
             StudentUserName.Clear();
             StudentPassword.Clear();
+            OTPMAIL.Clear();
            
             
         }
@@ -169,10 +175,19 @@ namespace C__UnicomManagementSystem.form
             //    StudentUserName.Focus();
             //    return false;
             //}
-            if (!System.Text.RegularExpressions.Regex.IsMatch(StudentUserName.Text, @"^[A-Za-z][A-Za-z0-9_]{3,}$"))
+            int enteredOTP;
+            if (!int.TryParse(OTPMAIL.Text, out enteredOTP))
             {
-                MessageBox.Show("Invalid username. Must start with a letter, contain only letters, numbers, or underscore, and be at least 4 characters long.",
-                                "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter a valid numeric OTP.");
+                return false;
+            }
+
+            int storedOTP = Convert.ToInt32(LoginDitals.Get("randomNumber"));
+
+
+            if (enteredOTP != storedOTP)
+            {
+                MessageBox.Show($"Incorrect OTP. Please try again.{storedOTP}");
                 return false;
             }
             if (string.IsNullOrWhiteSpace(StudentPassword.Text))
@@ -207,6 +222,30 @@ namespace C__UnicomManagementSystem.form
         private void batch_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void SENTOTP_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                LoginDitals.Clear();
+                Random random = new Random();
+                int randomNumber = random.Next(100000, 999999); // 6-digit OTP
+                LoginDitals.Set("randomNumber", randomNumber);
+                // MessageBox.Show($"{ randomNumber}");
+
+                string to = StudentUserName.Text;  //"kobitharankobitharan@gmail.com";
+                string subject = "Welcome to Our System!";
+                string message = $"Dear Friend,\n\nThank you for registering with us.\nYour One-Time Password (OTP) for verification is: {randomNumber}.\n\nPlease do not share this code with anyone.\n\nRegards,\nSupport Team";
+
+                string result = _emailController.SendEmail(to, subject, message);
+                MessageBox.Show(result);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please enter a valid email address before sending.");
+
+            }
         }
     }
 }

@@ -171,9 +171,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(406, 273);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 13);
+            this.label7.Size = new System.Drawing.Size(32, 13);
             this.label7.TabIndex = 15;
-            this.label7.Text = "UserName";
+            this.label7.Text = "Email";
             // 
             // button2
             // 

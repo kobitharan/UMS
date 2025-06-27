@@ -15,5 +15,6 @@ namespace C__UnicomManagementSystem.Utilities
         public static string ALLID { get; set; } 
         public static int UserId { get; set; }
         public static int CourseId { get; set; }
+        public static int randomNumber { get; set; }
     }
 }

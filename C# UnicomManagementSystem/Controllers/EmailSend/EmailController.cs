@@ -5,33 +5,45 @@ using System.Net;
 using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
+using MailKit.Net.Smtp;
+using MimeKit;
+using MailKit.Security;
 
 namespace C__UnicomManagementSystem.Controllers.EmailSend
 {
     internal class EmailController
     {
-        public void SendEmail(string toEmail, string subject, string body)
+        public  string SendEmail(string toEmail, string subject, string body)
         {
             try
             {
-                MailMessage mail = new MailMessage();
-                mail.From = new MailAddress("kobitharankobi@gmail.com"); // உங்க Gmail
-                mail.To.Add(toEmail);
-                mail.Subject = subject;
-                mail.Body = body;
+                var email = new MimeMessage();
+                email.From.Add(MailboxAddress.Parse("youkissme10time@gmail.com"));
+                email.To.Add(MailboxAddress.Parse(toEmail));
+                email.Subject = subject;
 
-                SmtpClient smtp = new SmtpClient("smtp.gmail.com");
-                smtp.Port = 587;
-                smtp.Credentials = new NetworkCredential("kobitharankobi@gmail.com", "@kobi2005"); // Gmail App Password
-                smtp.EnableSsl = true;
+                email.Body = new TextPart("plain")
+                {
+                    Text = body
+                };
 
-                smtp.Send(mail);
-               
+                using (var smtp = new MailKit.Net.Smtp.SmtpClient())
+                {
+                    smtp.Connect("smtp.gmail.com", 465, SecureSocketOptions.SslOnConnect); // Use SSL
+                    smtp.Authenticate("youkissme10time@gmail.com", "jcnyueufvwrlqnup"); // App password only
+                    smtp.Send(email);
+                    smtp.Disconnect(true);
+                }
+
+                return "Email Sent Successfully!";
             }
             catch (Exception ex)
             {
-              
+                return $"Email Failed: {ex.Message}";
             }
+           
+
+             
         }
     }
 }

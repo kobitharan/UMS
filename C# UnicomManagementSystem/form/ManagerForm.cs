@@ -50,6 +50,11 @@ namespace C__UnicomManagementSystem.form
         {
             LoadForm(new LecturerDitals());
         }
+
+        private void MailSend_Click(object sender, EventArgs e)
+        {
+            LoadForm(new Massage());
+        }
     }
 
 }
